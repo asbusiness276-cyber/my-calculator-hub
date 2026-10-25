@@ -1214,5 +1214,81 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "Why do two SIP calculators give different results for the same inputs?", "answer": "The most common reason is payment timing: beginning-of-month versus end-of-month. Other reasons include monthly versus annual compounding, and rounding. Check the timing and compounding assumptions before comparing results." },
       { "question": "Is a SIP return guaranteed?", "answer": "No. SIPs invest in mutual funds, whose returns vary with the market. A SIP calculator shows an estimate for an assumed return. It is not a promise of future returns." }
     ]
+  },
+  "how-to-calculate-ppf": {
+    "slug": "how-to-calculate-ppf",
+    "leadParagraph": "The Public Provident Fund (PPF) is a long-term, government-backed savings scheme in India with a 15-year lock-in. You can deposit between Rs 500 and Rs 1,50,000 per financial year. Interest is compounded annually and credited once a year, and the rate is declared quarterly, so it can change during the 15 years. A PPF calculator therefore shows an estimate for an assumed rate, not a guaranteed maturity value.",
+    "keyTakeaways": [
+      "PPF has a 15-year lock-in, with deposits from Rs 500 to Rs 1,50,000 per financial year.",
+      "Interest is compounded annually. Deposits made before 5 April earn interest for the full financial year, which is why April deposits give the highest maturity value in the illustration below.",
+      "The worked example below uses 7.1% as an assumed rate throughout. If the declared rate changes, the maturity value will change too.",
+      "PPF interest and maturity are tax-exempt under the current EEE treatment in India, subject to tax law at the time of withdrawal. This guide is an illustration, not tax advice."
+    ],
+    "sections": [
+      {
+        "id": "ppf-formula",
+        "heading": "1. The PPF Formula",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "For a fixed annual deposit A, an annual rate r and n years, with deposits at the start of each year (April deposits), the maturity value is A x [((1 + r)^n - 1) / r] x (1 + r). Without the final (1 + r) factor, the same formula gives the value for end-of-year deposits."
+        ],
+        "formulaBox": {
+          "title": "PPF Maturity Value Formula",
+          "formula": "FV = A x [((1 + r)^n - 1) / r] x (1 + r)  [April deposits]",
+          "variables": [
+            { "symbol": "A", "meaning": "Annual PPF deposit, between Rs 500 and Rs 1,50,000" },
+            { "symbol": "r", "meaning": "Assumed annual interest rate, declared quarterly" },
+            { "symbol": "n", "meaning": "Number of years, 15 for the initial lock-in" },
+            { "symbol": "FV", "meaning": "Estimated maturity value at the end of the term" }
+          ]
+        }
+      },
+      {
+        "id": "ppf-worked-example",
+        "heading": "2. Worked Example: Rs 1,50,000 per Year for 15 Years",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take the maximum annual deposit of Rs 1,50,000, deposited each April, at an assumed 7.1% annual rate for the full 15-year lock-in."
+        ],
+        "workedExample": {
+          "scenarioTitle": "Rs 1,50,000 per Year, 7.1% Assumed Rate, 15 Years",
+          "scenarioText": "Annual deposit Rs 1,50,000 | Assumed annual rate 7.1% | Duration 15 years | April deposits, annual compounding.",
+          "steps": [
+            { "stepTitle": "Step 1: Total deposited", "math": "Rs 1,50,000 x 15 = Rs 22,50,000", "explanation": "This is the principal you actually paid in over 15 years." },
+            { "stepTitle": "Step 2: Apply the PPF formula", "math": "FV = 1,50,000 x [((1.071)^15 - 1) / 0.071] x 1.071 = Rs 40,68,209", "explanation": "The final (1.071) factor is the April-deposit adjustment. Deposits made later in the year would earn less." },
+            { "stepTitle": "Step 3: Interest earned", "math": "Rs 40,68,209 - Rs 22,50,000 = Rs 18,18,209", "explanation": "Interest is almost as large as the principal over 15 years, because compounding has time to work." }
+          ],
+          "finalResult": "Estimated maturity value: Rs 40,68,209 (deposited Rs 22,50,000; estimated interest Rs 18,18,209). This assumes 7.1% throughout and April deposits; a different declared rate or deposit timing will change the result."
+        }
+      },
+      {
+        "id": "ppf-comparison",
+        "heading": "3. Different Annual Deposits, Same 15 Years and Assumed Rate",
+        "badge": "Comparison",
+        "paragraphs": [
+          "Because PPF interest compounds annually, a larger annual deposit does not just add principal, it also adds interest on every earlier deposit. The table below keeps the same 7.1% assumed rate and April deposits for all rows."
+        ],
+        "table": {
+          "title": "PPF Maturity by Annual Deposit (7.1% assumed, 15 years, April deposits)",
+          "headers": ["Annual Deposit", "Total Deposited", "Estimated Maturity Value"],
+          "rows": [
+            ["Rs 50,000", "Rs 7,50,000", "Rs 13,56,070"],
+            ["Rs 1,00,000", "Rs 15,00,000", "Rs 27,12,139"],
+            ["Rs 1,50,000", "Rs 22,50,000", "Rs 40,68,209"]
+          ]
+        },
+        "callout": { "type": "info", "title": "Deposit timing matters", "text": "PPF interest for a month is calculated on the lowest balance between the 5th and the last day of that month. Depositing before 5 April therefore earns interest for the full financial year, while a deposit at the end of March earns almost no interest for that year." },
+        "pitfalls": [
+          { "mistake": "Assuming the current rate stays fixed for 15 years", "fix": "Treat any PPF result as a scenario at an assumed rate. Re-run it at a lower rate, for example 6.5%, to see the range." },
+          { "mistake": "Depositing late in the financial year and expecting full-year interest", "fix": "Deposit before 5 April if you want the deposit to earn interest for that full year." },
+          { "mistake": "Forgetting the Rs 1,50,000 annual limit", "fix": "Deposits above Rs 1,50,000 in a year do not earn interest on the excess, so split large amounts across years instead." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate PPF maturity by hand?", "answer": "Use FV = A x [((1 + r)^n - 1) / r] x (1 + r) for April deposits, where A is the annual deposit, r is the assumed annual rate and n is 15 years. For Rs 1,50,000 per year at 7.1% for 15 years, the estimated maturity value is Rs 40,68,209." },
+      { "question": "What is the minimum and maximum PPF deposit?", "answer": "You must deposit at least Rs 500 per financial year to keep the account active, and you can deposit at most Rs 1,50,000 per financial year. The account has a 15-year lock-in, with extension in blocks of 5 years after that." },
+      { "question": "Is PPF maturity guaranteed?", "answer": "PPF is government-backed, but the interest rate is declared quarterly and can change. A calculator result at 7.1% is therefore an estimate, not a guaranteed maturity value." }
+    ]
   }
 };

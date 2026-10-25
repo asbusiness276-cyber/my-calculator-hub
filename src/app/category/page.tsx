@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "All Calculator Categories - Free Online Tools | My Calculator Hub",
+  title: "All Calculator Categories - Free Online Tools",
   description: "Browse all 10 calculation categories including Finance & Investment, Health & Fitness, Academic & Students, and Daily Utility & Math. 100% free and accurate online tools.",
   alternates: {
     canonical: "/category",

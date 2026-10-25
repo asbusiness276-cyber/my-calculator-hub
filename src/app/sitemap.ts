@@ -4,61 +4,56 @@ import { articles } from "@/lib/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://mycalculatorhub.pro";
-  const now = new Date();
 
   // 1. Static Pages
+  // Note: lastModified is intentionally omitted for static and calculator
+  // pages. Previously every URL was stamped with the current date on every
+  // build, which made every page look freshly changed even when it was not.
+  // Only articles carry a real updated date from their data.
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}`,
-      lastModified: now,
       changeFrequency: "daily",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/author`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/terms`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/disclaimer`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/category`,
-      lastModified: now,
       changeFrequency: "daily",
       priority: 0.85,
     },
   ];
 
-  // 2. Article Guides (Dynamic for all 100+ articles)
+  // 2. Article Guides
   const uniqueArticles = Array.from(
     new Map(articles.map((art) => [art.slug, art])).values()
   );
@@ -66,13 +61,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articleRoutes: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/articles`,
-      lastModified: now,
       changeFrequency: "daily",
       priority: 0.9,
     },
     ...uniqueArticles.map((art) => ({
       url: `${baseUrl}/articles/${art.slug}`,
-      lastModified: now,
+      lastModified: art.updated ? new Date(art.updated) : undefined,
       changeFrequency: "weekly" as const,
       priority: 0.85,
     })),
@@ -85,7 +79,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const calcRoutes: MetadataRoute.Sitemap = uniqueCalculators.map((calc) => ({
     url: `${baseUrl}/${calc.slug}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.9,
   }));
@@ -101,7 +94,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const categoryRoutes: MetadataRoute.Sitemap = uniqueCategorySlugs.map((slug) => ({
     url: `${baseUrl}/category/${slug}`,
-    lastModified: now,
     changeFrequency: "weekly",
     priority: 0.75,
   }));

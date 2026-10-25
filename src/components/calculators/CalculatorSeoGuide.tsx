@@ -88,9 +88,9 @@ const categoryWorkedExamples: Record<string, {
   "Finance & Investment": {
     scenarioTitle: "Wealth Growth & Amortization Modeling",
     setup: "Suppose an investor models a $10,000 baseline sum with $500 monthly additions at an estimated 8.5% annual return over a 10-year investment horizon.",
-    step1: "Initial variables are validated: compounding occurs monthly (n = 12), with periodic rate r = 0.085 / 12 = 0.007083.",
+    step1: "Initial variables are validated: compounding occurs monthly (n = 12), with periodic rate r = 0.085 / 12 = 0.007083, and monthly additions are made at the beginning of each month.",
     step2: "Applying standard future value equations yields a total principal invested of $70,000 ($10,000 initial + $60,000 monthly contributions).",
-    step3: "Total wealth accumulated reaches approximately $118,450, generating $48,450 in compound interest alone.",
+    step3: "Total wealth accumulated reaches $118,062, generating $48,062 in compound interest alone (beginning-of-month payments).",
     conclusion: "Notice how compound growth accelerates exponentially in years 7 through 10, highlighting why time in the market outweighs short-term timing.",
   },
   "Science & Chemistry": {
@@ -167,10 +167,87 @@ const categoryWorkedExamples: Record<string, {
   },
 };
 
+// Per-slug worked examples, checked before the category fallback below.
+// This stops a single SIP example appearing on EMI, GST, PPF, HECS and
+// mortgage pages. All figures below were independently recomputed.
+const slugWorkedExamples: Record<string, {
+  scenarioTitle: string;
+  setup: string;
+  step1: string;
+  step2: string;
+  step3: string;
+  conclusion: string;
+}> = {
+  "sip-calculator": {
+    scenarioTitle: "SIP Wealth Growth Walkthrough",
+    setup: "Suppose an investor models a $10,000 baseline sum with $500 monthly additions at an estimated 8.5% annual return over a 10-year investment horizon, with payments at the beginning of each month.",
+    step1: "Initial variables are validated: compounding occurs monthly (n = 12), with periodic rate r = 0.085 / 12 = 0.007083.",
+    step2: "Applying standard future value equations yields a total principal invested of $70,000 ($10,000 initial + $60,000 monthly contributions).",
+    step3: "Total wealth accumulated reaches $118,062, generating $48,062 in compound interest alone (beginning-of-month payments).",
+    conclusion: "Notice how compound growth accelerates exponentially in years 7 through 10, highlighting why time in the market outweighs short-term timing.",
+  },
+  "emi-calculator": {
+    scenarioTitle: "EMI Repayment Walkthrough",
+    setup: "A borrower takes a loan of Rs 5,00,000 at 8.5% annual interest for 20 years, repaid in equal monthly instalments.",
+    step1: "Use EMI = [P x r x (1 + r)^n] / [(1 + r)^n - 1], with monthly rate r = 0.085 / 12 and n = 240 months.",
+    step2: "Substituting P = 5,00,000 gives EMI = Rs 4,339 per month.",
+    step3: "Total paid = Rs 10,41,388; total interest = Rs 5,41,388.",
+    conclusion: "A longer tenure lowers the monthly EMI but raises total interest, so the EMI alone does not show the full cost of the loan.",
+  },
+  "mortgage-calculator": {
+    scenarioTitle: "Mortgage Repayment Walkthrough",
+    setup: "A borrower takes a $400,000 mortgage at 6.5% annual interest for 30 years, repaid in equal monthly instalments.",
+    step1: "Use EMI = [P x r x (1 + r)^n] / [(1 + r)^n - 1], with monthly rate r = 0.065 / 12 and n = 360 months.",
+    step2: "Substituting P = $400,000 gives a monthly payment of $2,528.",
+    step3: "Total paid = $910,178; total interest = $510,178.",
+    conclusion: "Over 30 years the interest exceeds the original principal, which is why extra principal payments early in the loan have the largest effect.",
+  },
+  "gst-calculator": {
+    scenarioTitle: "GST Addition and Removal Walkthrough",
+    setup: "A product is priced at $100 before tax, with GST at 18%.",
+    step1: "GST amount = $100 x 18% = $18, split as CGST $9 + SGST $9.",
+    step2: "Price including GST = $100 + $18 = $118.",
+    step3: "Working backwards, an inclusive price of $118 gives a base of $100 and GST of $18.",
+    conclusion: "GST is calculated on the pre-tax price, not on the inclusive price, so the two directions must not be mixed.",
+  },
+  "ppf-calculator": {
+    scenarioTitle: "PPF Maturity Walkthrough",
+    setup: "An investor deposits Rs 1,50,000 each year for 15 years at 7.1% annual interest, deposited each April with annual crediting. The rate is declared quarterly and can change, so this is an illustration, not a guaranteed return.",
+    step1: "Annual deposits over 15 years total Rs 22,50,000 in principal.",
+    step2: "Applying annual compounding at 7.1% to April deposits gives a maturity value of approximately Rs 40,68,209.",
+    step3: "Interest earned is approximately Rs 18,18,209 (maturity minus principal).",
+    conclusion: "The 15-year lock-in is what allows compounding to do most of the work in the later years.",
+  },
+  "hecs-debt-calculator": {
+    scenarioTitle: "HECS Indexation Example",
+    setup: "Example only, not a current official rate: a HECS debt of $40,000 is indexed at 4.0%.",
+    step1: "Indexation amount = $40,000 x 4.0% = $1,600.",
+    step2: "Indexed debt = $40,000 + $1,600 = $41,600.",
+    step3: "No repayment is assumed in this step; repayments depend on income and the applicable repayment rate.",
+    conclusion: "Indexation raises the debt balance before repayments are applied, so the balance can grow even without new study debt.",
+  },
+  "hecs-indexation-calculator": {
+    scenarioTitle: "HECS Indexation Example",
+    setup: "Example only, not a current official rate: a HECS debt of $40,000 is indexed at 4.0%.",
+    step1: "Indexation amount = $40,000 x 4.0% = $1,600.",
+    step2: "Indexed debt = $40,000 + $1,600 = $41,600.",
+    step3: "No repayment is assumed in this step; repayments depend on income and the applicable repayment rate.",
+    conclusion: "Indexation raises the debt balance before repayments are applied, so the balance can grow even without new study debt.",
+  },
+  "hecs-repayment-time-calculator": {
+    scenarioTitle: "HECS Indexation Example",
+    setup: "Example only, not a current official rate: a HECS debt of $40,000 is indexed at 4.0%.",
+    step1: "Indexation amount = $40,000 x 4.0% = $1,600.",
+    step2: "Indexed debt = $40,000 + $1,600 = $41,600.",
+    step3: "Repayment time then depends on income-based repayments applied after indexation, not on indexation alone.",
+    conclusion: "Indexation and repayments move the balance in opposite directions, so both must be modelled together.",
+  },
+};
+
 export default function CalculatorSeoGuide({ calc, faqs }: Props) {
   const cleanTitle = calc.title.split(" -")[0].replace("Free ", "").replace(" 2026", "");
   const ctx = categoryContext[calc.category] || categoryContext["Daily Utility & Math"];
-  const example = categoryWorkedExamples[calc.category] || categoryWorkedExamples["Daily Utility & Math"];
+  const example = slugWorkedExamples[calc.slug] || categoryWorkedExamples[calc.category] || categoryWorkedExamples["Daily Utility & Math"];
   const categorySlug = calc.category.toLowerCase().replace(/ /g, "-").replace(/&/g, "and");
   const theme = getCategoryTheme(calc.category);
 

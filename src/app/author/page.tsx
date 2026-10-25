@@ -236,7 +236,7 @@ export default function AuthorPage() {
               href="/articles"
               className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold text-sm whitespace-nowrap"
             >
-              Browse All 51 Guides &rarr;
+              Browse All 52 Guides &rarr;
             </Link>
           </div>
 

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Shield, Lock, Eye, Cookie, FileText, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | My Calculator Hub",
+  title: "Privacy Policy",
   description: "Learn how My Calculator Hub protects your privacy, uses cookies, and complies with Google AdSense, GDPR, and CCPA guidelines.",
   alternates: {
     canonical: "/privacy-policy",

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Shield, Lock, Eye, Cookie, FileText, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | My Calculator Hub",
+  title: "Privacy Policy",
   description: "Learn how My Calculator Hub protects your privacy, uses cookies, and complies with Google AdSense, GDPR, and CCPA guidelines.",
   alternates: {
     canonical: "/privacy-policy",
@@ -60,9 +60,9 @@ export default function PrivacyPolicy() {
             Like any other website, My Calculator Hub uses "cookies". These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
           </p>
 
-          <h2>5. Google DoubleClick DART Cookie & Google AdSense</h2>
+          <h2>5. Google Advertising Cookies & Google AdSense</h2>
           <p>
-            Google is one of the third-party vendors on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to <Link href="/">mycalculatorhub.pro</Link> and other sites on the internet.
+            Google is one of the third-party vendors on our site. It also uses cookies, known as advertising cookies, to serve ads to our site visitors based upon their visit to <Link href="/">mycalculatorhub.pro</Link> and other sites on the internet.
           </p>
           <ul>
             <li>

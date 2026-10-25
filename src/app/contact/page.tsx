@@ -20,7 +20,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Direct Support & Editorial Desk | My Calculator Hub",
+  title: "Contact Us - Direct Support & Editorial Desk",
   description: "Get in touch directly with Saahil and the editorial computational team at My Calculator Hub. Fast 24-48h support for formula checks, custom calculator requests, and academic inquiries.",
   alternates: {
     canonical: "/contact",

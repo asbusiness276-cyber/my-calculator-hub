@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FileText, ShieldAlert } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | My Calculator Hub",
+  title: "Terms of Service",
   description: "Read the terms of service, conditions of use, and legal limitations for My Calculator Hub.",
   alternates: {
     canonical: "/terms",

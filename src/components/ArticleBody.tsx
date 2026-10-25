@@ -238,7 +238,7 @@ export function ArticleBody({
             </div>
 
             <p className="text-slate-300 text-sm leading-relaxed max-w-2xl">
-              Don't calculate by hand. Every calculator below executes locally on your device with 100% mathematical precision and zero server tracking.
+              Don't calculate by hand. Every calculator below executes locally on your device with 100% mathematical precision and no calculation-input tracking on our servers.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
@@ -288,7 +288,7 @@ export function ArticleBody({
         <section id="editorial" className="bg-slate-50 border border-slate-200 rounded-3xl p-8 text-xs text-slate-500 space-y-2">
           <h3 className="font-bold text-slate-700 text-sm">Editorial Standards &amp; Verification Protocol</h3>
           <p>
-            Authored and verified by Saahil, Founder &amp; Lead Computational Editor of My Calculator Hub. All mathematical formulations are derived from peer-reviewed literature, statutory guidelines, and accredited educational frameworks. Computations run client-side in your web browser with zero server data collection.
+            Authored and verified by Saahil, Founder &amp; Lead Computational Editor of My Calculator Hub. All mathematical formulations are derived from peer-reviewed literature, statutory guidelines, and accredited educational frameworks. Computations run client-side in your web browser with no calculation-input collection on our servers.
           </p>
         </section>
 

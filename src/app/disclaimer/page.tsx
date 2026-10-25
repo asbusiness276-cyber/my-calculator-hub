@@ -3,7 +3,7 @@ import Link from "next/link";
 import { AlertTriangle, ShieldAlert, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Disclaimer & Calculation Limitations | My Calculator Hub",
+  title: "Disclaimer & Calculation Limitations",
   description: "Read our calculation disclaimer, accuracy standards, and legal limitations regarding financial, medical, and academic calculations.",
   alternates: {
     canonical: "/disclaimer",

@@ -107,7 +107,7 @@ export default function AuthorPage() {
               </p>
 
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                With a deep background in computational web development, financial logic, and educational modeling, I design every algorithm to execute locally in your web browser. That means you get instantaneous results with zero server data tracking and total peace of mind.
+                With a deep background in computational web development, financial logic, and educational modeling, I design every algorithm to execute locally in your web browser. That means you get instantaneous results with no calculation-input tracking on our servers and total peace of mind.
               </p>
 
               {/* Action Buttons */}
@@ -205,7 +205,7 @@ export default function AuthorPage() {
               </div>
               <h3 className="text-lg font-bold text-gray-900">Uncompromising Data Privacy</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Unlike traditional tools that transmit user numbers to remote servers, Saahil mandates that all computations remain entirely on the user's device via client-side JavaScript. Your salary, loans, and grades are never saved or logged.
+                Unlike traditional tools that transmit user numbers to remote servers, Saahil mandates that all computations remain entirely on the user's device via client-side JavaScript. Your salary, loans, and grades are never saved or logged on our servers as calculation inputs. Visiting the site itself still involves standard hosting log files and cookies - see Privacy Policy sections 3-6.
               </p>
             </div>
 

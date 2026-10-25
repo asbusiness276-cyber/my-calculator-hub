@@ -25,6 +25,7 @@ const articleGroups: { category: string; slugs: string[] }[] = [
       "apr-vs-apy-explained",
       "how-inflation-affects-savings",
       "debt-to-income-ratio-guide",
+      "how-to-calculate-sip",
     ],
   },
   {
@@ -90,6 +91,7 @@ const exactTitles: Record<string, string> = {
   "how-compound-interest-works": "How Compound Interest Works: The Mathematical Power of Compounding",
   "simple-interest-vs-compound-interest": "Simple Interest vs Compound Interest: Key Differences & Formulas",
   "how-to-calculate-loan-repayments": "How to Calculate Loan Repayments: Complete EMI & Amortization Guide",
+  "how-to-calculate-sip": "How to Calculate SIP Returns: Step-by-Step Formula & Examples",
   "mortgage-repayment-guide": "Mortgage Repayment Guide: Principal, Interest & Amortization Mechanics",
   "how-much-emergency-fund": "How Much Emergency Fund Do You Really Need? Practical Rules & Benchmarks",
   "salary-to-hourly-rate-guide": "Salary to Hourly Rate Guide: Accurate Conversion Formula & Overtime",

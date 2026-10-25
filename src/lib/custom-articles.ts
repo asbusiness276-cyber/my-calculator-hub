@@ -1138,5 +1138,81 @@ export const customArticles: Record<string, CustomArticleData> = {
         "answer": "WES (World Education Services) evaluates each individual course grade against their proprietary country database, assigning semester-hour weights and standardized quality points (4.0 scale) to recompute a unified cumulative US GPA."
       }
     ]
+  },
+  "how-to-calculate-sip": {
+    "slug": "how-to-calculate-sip",
+    "leadParagraph": "A Systematic Investment Plan (SIP) lets you invest a fixed amount in a mutual fund at regular intervals, usually every month, instead of investing a large lump sum at once. SIP returns are not fixed interest: they depend on market performance, so a SIP calculator estimates a maturity value for an assumed annual return, it does not guarantee that return.",
+    "keyTakeaways": [
+      "SIP maturity value is calculated with monthly compounding: divide the assumed annual return by 12 to get the monthly rate.",
+      "Payments made at the beginning of each month earn one extra month of compounding compared with end-of-month payments, so always state which timing you used.",
+      "Time matters more than timing the market: the same monthly amount over 20 years can produce a far larger maturity value than over 10 years at the same assumed return.",
+      "A SIP return is an estimate, not a promise. Actual mutual fund returns vary with the market and can be lower, or even negative, in some periods."
+    ],
+    "sections": [
+      {
+        "id": "sip-formula",
+        "heading": "1. The SIP Formula",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "For a fixed monthly investment P, a monthly rate i and n monthly instalments, the maturity value for end-of-month payments is P x [((1 + i)^n - 1) / i]. For beginning-of-month payments, multiply that result by (1 + i). This site's SIP calculator uses beginning-of-month payments, so its results follow the second version."
+        ],
+        "formulaBox": {
+          "title": "SIP Maturity Value Formula",
+          "formula": "FV = P x [((1 + i)^n - 1) / i] x (1 + i)  [beginning-of-month]",
+          "variables": [
+            { "symbol": "P", "meaning": "Monthly SIP instalment" },
+            { "symbol": "i", "meaning": "Monthly rate, equal to assumed annual return divided by 12" },
+            { "symbol": "n", "meaning": "Total number of monthly instalments" },
+            { "symbol": "FV", "meaning": "Estimated maturity value at the end of the SIP" }
+          ]
+        }
+      },
+      {
+        "id": "sip-worked-example",
+        "heading": "2. Worked Example: Rs 10,000 per Month for 10 Years",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a SIP of Rs 10,000 per month at an assumed 12% annual return for 10 years, with payments at the beginning of each month."
+        ],
+        "workedExample": {
+          "scenarioTitle": "Rs 10,000 per Month, 12% Assumed Return, 10 Years",
+          "scenarioText": "Monthly investment Rs 10,000 | Assumed annual return 12% | Duration 10 years (120 months) | Beginning-of-month payments.",
+          "steps": [
+            { "stepTitle": "Step 1: Find the monthly rate and number of instalments", "math": "i = 0.12 / 12 = 0.01; n = 10 x 12 = 120", "explanation": "The annual return is converted to a monthly rate, and years are converted to months." },
+            { "stepTitle": "Step 2: Total invested", "math": "Rs 10,000 x 120 = Rs 12,00,000", "explanation": "This is the principal you actually paid in, before any returns." },
+            { "stepTitle": "Step 3: Estimated maturity value", "math": "FV = 10,000 x [((1.01)^120 - 1) / 0.01] x 1.01 = Rs 23,23,391", "explanation": "The (1.01) factor at the end is the beginning-of-month adjustment. Without it, the end-of-month value would be Rs 23,00,387." }
+          ],
+          "finalResult": "Estimated maturity value: Rs 23,23,391 (invested Rs 12,00,000; estimated returns Rs 11,23,391). This is an illustration at an assumed 12% return, not a guaranteed outcome."
+        }
+      },
+      {
+        "id": "sip-vs-lump-sum",
+        "heading": "3. SIP vs Lump Sum, and Why Timing Must Be Stated",
+        "badge": "Comparison",
+        "paragraphs": [
+          "A lump sum invested at once earns returns on the full amount from day one, while a SIP earns returns gradually as each instalment is invested. That is why the same annual return gives different results for the two methods, and why two SIP calculators can differ by a small amount if one assumes beginning-of-month payments and the other assumes end-of-month payments. Always check the timing assumption before comparing two results."
+        ],
+        "table": {
+          "title": "Same Monthly Amount, Different Durations (12% assumed, beginning-of-month)",
+          "headers": ["Monthly SIP", "Duration", "Invested", "Estimated Maturity Value"],
+          "rows": [
+            ["Rs 5,000", "5 years", "Rs 3,00,000", "Rs 4,12,432"],
+            ["Rs 10,000", "10 years", "Rs 12,00,000", "Rs 23,23,391"],
+            ["Rs 5,000", "20 years", "Rs 12,00,000", "Rs 49,95,740"]
+          ]
+        },
+        "callout": { "type": "warning", "title": "Returns are not guaranteed", "text": "Mutual fund SIP returns depend on market performance. An assumed 12% return is used here only to show the maths. Check the fund's actual past performance, fees and risk level before investing, and remember past performance does not guarantee future returns." },
+        "pitfalls": [
+          { "mistake": "Comparing SIP results without checking payment timing", "fix": "State beginning-of-month or end-of-month in every example, as this guide does." },
+          { "mistake": "Treating an assumed return as a fixed interest rate", "fix": "Use the assumed return only as a scenario. Test lower returns too, for example 8% and 10%, before making a decision." },
+          { "mistake": "Stopping a SIP after a market fall", "fix": "A fall means new instalments buy more units at lower prices. Whether to continue depends on your goals and risk tolerance, not on a single month's return." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate SIP returns by hand?", "answer": "Use FV = P x [((1 + i)^n - 1) / i], multiplied by (1 + i) for beginning-of-month payments, where i is the assumed annual return divided by 12 and n is the number of months. For Rs 10,000 per month at 12% for 10 years, beginning-of-month, the estimated maturity value is Rs 23,23,391." },
+      { "question": "Why do two SIP calculators give different results for the same inputs?", "answer": "The most common reason is payment timing: beginning-of-month versus end-of-month. Other reasons include monthly versus annual compounding, and rounding. Check the timing and compounding assumptions before comparing results." },
+      { "question": "Is a SIP return guaranteed?", "answer": "No. SIPs invest in mutual funds, whose returns vary with the market. A SIP calculator shows an estimate for an assumed return. It is not a promise of future returns." }
+    ]
   }
 };

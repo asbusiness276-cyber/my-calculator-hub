@@ -150,7 +150,7 @@ export default function AuthorPage() {
               <span className="text-xs font-bold text-blue-900/70 uppercase tracking-wide">Calculators Built</span>
             </div>
             <div className="p-5 bg-emerald-50/70 border border-emerald-100 rounded-2xl text-center">
-              <span className="block text-2xl md:text-3xl font-black text-emerald-600">49</span>
+              <span className="block text-2xl md:text-3xl font-black text-emerald-600">52</span>
               <span className="text-xs font-bold text-emerald-900/70 uppercase tracking-wide">Guides Authored</span>
             </div>
             <div className="p-5 bg-purple-50/70 border border-purple-100 rounded-2xl text-center">

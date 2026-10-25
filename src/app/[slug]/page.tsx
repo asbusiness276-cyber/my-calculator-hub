@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { calculators, CalculatorMeta } from "@/lib/calculators";
+import { calculators } from "@/lib/calculators";
 import dynamic from "next/dynamic";
 import React from "react";
 import { Metadata } from "next";
@@ -31,27 +31,6 @@ const CalculatorComponents: Record<string, React.ComponentType<any>> = {
   UniversalCalculator: dynamic(() => import("@/components/calculators/UniversalCalculator")),
 };
 
-function getDynamicFallbackCalc(slug: string): CalculatorMeta | undefined {
-  if (!slug || slug.includes(".") || slug.includes("/") || slug.length < 2) return undefined;
-  const titleWords = slug
-    .split("-")
-    .map((w) => {
-      if (["wam", "gpa", "cgpa", "atar", "hecs", "bmi", "bmr", "tdee", "gst", "vat", "emi", "apr", "apy", "roi", "roas", "cpc", "cpm", "ctr", "mrr", "arr", "saas", "csv", "json", "url", "gcf", "lcm"].includes(w.toLowerCase())) return w.toUpperCase();
-      return w.charAt(0).toUpperCase() + w.slice(1);
-    })
-    .join(" ");
-
-  return {
-    id: slug,
-    slug,
-    title: `Free ${titleWords} 2026 - Instant Online Calculator`,
-    description: `Use our free online ${titleWords.toLowerCase()} to calculate results instantly with accurate formulas, step-by-step guidance, and real-time outputs.`,
-    category: "Daily Utility & Math",
-    componentName: "UniversalCalculator",
-    mode: "basic",
-  };
-}
-
 export async function generateStaticParams() {
   return calculators.map((calc) => ({
     slug: calc.slug,
@@ -60,8 +39,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata(props: { params: Promise<{ slug: string }> | { slug: string } }): Promise<Metadata> {
   const params = await props.params;
-  const calc = calculators.find((c) => c.slug === params.slug) || getDynamicFallbackCalc(params.slug);
-  
+  const calc = calculators.find((c) => c.slug === params.slug);
+
   if (!calc) {
     return { title: "Calculator Not Found | My Calculator Hub" };
   }
@@ -100,7 +79,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 
 export default async function CalculatorPage(props: { params: Promise<{ slug: string }> | { slug: string } }) {
   const params = await props.params;
-  const calc = calculators.find((c) => c.slug === params.slug) || getDynamicFallbackCalc(params.slug);
+  const calc = calculators.find((c) => c.slug === params.slug);
 
   if (!calc) {
     notFound();
@@ -139,10 +118,10 @@ export default async function CalculatorPage(props: { params: Promise<{ slug: st
         "name": calc.title,
         "description": calc.description,
         "url": `https://mycalculatorhub.pro/${calc.slug}`,
-        "applicationCategory": calc.category.includes("Finance") 
-          ? "FinanceApplication" 
-          : calc.category.includes("Health") 
-          ? "HealthApplication" 
+        "applicationCategory": calc.category.includes("Finance")
+          ? "FinanceApplication"
+          : calc.category.includes("Health")
+          ? "HealthApplication"
           : "UtilityApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript. Requires HTML5.",
@@ -208,9 +187,9 @@ export default async function CalculatorPage(props: { params: Promise<{ slug: st
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      
+
       {/* Subtle ambient colored glow based on category */}
-      <div 
+      <div
         className="absolute top-0 inset-x-0 h-[420px] pointer-events-none opacity-20 blur-3xl"
         style={{
           background: `radial-gradient(ellipse at 50% 0%, ${theme.primaryHex} 0%, ${theme.secondaryHex} 40%, transparent 75%)`

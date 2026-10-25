@@ -18,7 +18,7 @@ import { articles } from "@/lib/articles";
 import { CATEGORIES } from "@/lib/calculators";
 
 export const metadata: Metadata = {
-  title: "Saahil - Founder, Computational Specialist & Lead Editor | My Calculator Hub",
+  title: "Saahil - Founder, Computational Specialist & Lead Editor",
   description: "Meet Saahil, the founder and lead computational editor behind My Calculator Hub. Learn about his mathematical verification standards, background, and published guides.",
   alternates: {
     canonical: "/author",

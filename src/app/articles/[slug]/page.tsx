@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import { ArticleBody, getArticleToc } from "@/components/ArticleBody";
 import AuthorBio from "@/components/AuthorBio";
 import { articles, getArticle, getRelatedArticles, articleRedirects } from "@/lib/articles";
@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
 
   if (articleRedirects[slug]) {
-    redirect(articleRedirects[slug]);
+    permanentRedirect(articleRedirects[slug]);
   }
 
   const article = getArticle(slug);

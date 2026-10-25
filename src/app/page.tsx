@@ -55,11 +55,6 @@ export default function Home() {
         "name": "My Calculator Hub",
         "url": "https://mycalculatorhub.pro",
         "description": "Free, accurate, and private online calculators for finance, health, academics, and everyday math.",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://mycalculatorhub.pro/?q={search_term_string}",
-          "query-input": "required name=search_term_string",
-        },
       },
       {
         "@type": "Organization",

@@ -229,6 +229,15 @@ function titleFromSlug(slug: string) {
     .replace(/^Uni /, "University ");
 }
 
+// New guides whose dedicated .webp does not exist yet in public/images/articles.
+// Point them at existing, topically close images so the article page never renders a broken image.
+// Replace these with dedicated images when they are added to the repo.
+const featuredImageOverrides: Record<string, string> = {
+  "how-to-calculate-sip": "/images/articles/how-compound-interest-works.webp",
+  "how-to-calculate-ppf": "/images/articles/how-inflation-affects-savings.webp",
+  "how-to-calculate-gst": "/images/articles/how-to-calculate-percentage.webp",
+};
+
 export const articles: Article[] = articleGroups.flatMap((group, groupIndex) =>
   group.slugs.map((slug, itemIndex) => {
     const title = titleFromSlug(slug);
@@ -239,7 +248,7 @@ export const articles: Article[] = articleGroups.flatMap((group, groupIndex) =>
       excerpt: `${title} explained with definitions, formulas, worked examples, decision checks, common mistakes, and links to the most relevant free calculators.`,
       published: `2026-${String(((groupIndex + itemIndex) % 7) + 1).padStart(2, "0")}-12`,
       updated: "2026-08-14",
-      featuredImage: `/images/articles/${slug}.webp`,
+      featuredImage: featuredImageOverrides[slug] ?? `/images/articles/${slug}.webp`,
     };
   }),
 );

@@ -144,7 +144,7 @@ export default function RootLayout({
                 <ul className="space-y-2.5 text-sm">
                   <li><Link href="/author" className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors flex items-center gap-1.5"><Sparkles className="w-3.5 h-3.5" /> Founder & Author (Saahil)</Link></li>
                   <li><Link href="/about" className="hover:text-white transition-colors">About Us & Methodology</Link></li>
-                  <li><Link href="/articles" className="hover:text-white transition-colors">100+ Educational Guides</Link></li>
+                  <li><Link href="/articles" className="hover:text-white transition-colors">Educational Guides</Link></li>
                   <li><Link href="/contact" className="hover:text-white transition-colors">Contact Support</Link></li>
                   <li><Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy & Cookies</Link></li>
                   <li><Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>

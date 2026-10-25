@@ -73,6 +73,7 @@ export default async function ArticlePage({ params }: Props) {
   // filter below, so SIP came first and WAM was cut out of the tools box.
   const relatedOverrides: Record<string, string[]> = {
     "how-to-calculate-wam": ["wam-calculator", "semester-wam-calculator", "wam-to-gpa-calculator"],
+    "how-to-calculate-sip": ["sip-calculator", "compound-interest-calculator", "ppf-calculator"],
   };
   const terms = article.title.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
   let relatedCalculators = relatedOverrides[slug]

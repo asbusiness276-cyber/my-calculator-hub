@@ -403,7 +403,7 @@ export default function Home() {
                   <div className="text-xs text-emerald-900/70 font-semibold mt-0.5">Zero Server Logging</div>
                 </div>
                 <div className="bg-purple-50/60 p-4 rounded-2xl border border-purple-100 col-span-2 sm:col-span-1">
-                  <div className="text-2xl font-black text-purple-600">100+ Guides</div>
+                  <div className="text-2xl font-black text-purple-600">49 Guides</div>
                   <div className="text-xs text-purple-900/70 font-semibold mt-0.5">Worked Examples</div>
                 </div>
               </div>

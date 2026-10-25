@@ -5,7 +5,7 @@ import { CheckCircle2, ShieldCheck, Sparkles, Award, Mail, ExternalLink, Calcula
 import { calculators } from "@/lib/calculators";
 
 export const metadata: Metadata = {
-  title: "About Us | My Calculator Hub",
+  title: "About Us",
   description: "Learn about My Calculator Hub, our founder Saahil Sharma, our mission, and our verified mathematical calculation methodology.",
   alternates: {
     canonical: "/about",

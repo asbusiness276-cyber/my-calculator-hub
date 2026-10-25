@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
-import { ArticleBody, articleToc } from "@/components/ArticleBody";
+import { ArticleBody, getArticleToc } from "@/components/ArticleBody";
 import AuthorBio from "@/components/AuthorBio";
 import { articles, getArticle, getRelatedArticles, articleRedirects } from "@/lib/articles";
 import { calculators } from "@/lib/calculators";
@@ -64,6 +64,8 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) {
     notFound();
   }
+
+  const articleToc = getArticleToc(article);
 
   // Find relevant calculators
   // Explicit overrides for titles where generic keyword matching picks the

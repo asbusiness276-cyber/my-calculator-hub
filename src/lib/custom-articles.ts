@@ -1290,5 +1290,84 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "What is the minimum and maximum PPF deposit?", "answer": "You must deposit at least Rs 500 per financial year to keep the account active, and you can deposit at most Rs 1,50,000 per financial year. The account has a 15-year lock-in, with extension in blocks of 5 years after that." },
       { "question": "Is PPF maturity guaranteed?", "answer": "PPF is government-backed, but the interest rate is declared quarterly and can change. A calculator result at 7.1% is therefore an estimate, not a guaranteed maturity value." }
     ]
+  },
+  "how-to-calculate-gst": {
+    "slug": "how-to-calculate-gst",
+    "leadParagraph": "Goods and Services Tax (GST) is a consumption tax added to the price of most goods and services in India. GST rates are commonly 0%, 5%, 12%, 18% or 28%, depending on the item. The maths is simple, but the common mistake is mixing up the two directions: adding GST to a tax-exclusive price, and removing GST from a tax-inclusive price, which need different formulas.",
+    "keyTakeaways": [
+      "To add GST: GST amount = base price x GST rate, and total price = base price + GST amount.",
+      "To remove GST from an inclusive price: base price = total price / (1 + GST rate), not total price minus the rate percentage.",
+      "For intra-state sales, GST is split equally into CGST and SGST. For inter-state sales, it is charged as IGST at the full rate.",
+      "GST rates depend on the goods or services category. Always check the applicable rate for the item, do not assume 18%."
+    ],
+    "sections": [
+      {
+        "id": "gst-formula",
+        "heading": "1. The GST Formulas",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "If the price shown is exclusive of GST, multiply the base price by the rate to get the GST amount, then add it. If the price shown already includes GST, divide by (1 + rate) to recover the base price first, then subtract it from the total to get the GST amount."
+        ],
+        "formulaBox": {
+          "title": "GST Formulas",
+          "formula": "Adding GST: Total = Base x (1 + r). Removing GST: Base = Total / (1 + r); GST = Total - Base.",
+          "variables": [
+            { "symbol": "Base", "meaning": "Price before GST" },
+            { "symbol": "Total", "meaning": "Price including GST" },
+            { "symbol": "r", "meaning": "GST rate as a decimal, for example 0.18 for 18%" },
+            { "symbol": "GST", "meaning": "Tax amount included in, or added to, the price" }
+          ]
+        }
+      },
+      {
+        "id": "gst-worked-example",
+        "heading": "2. Worked Example: Rs 10,000 at 18% GST",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a product with a base price of Rs 10,000 and a GST rate of 18%."
+        ],
+        "workedExample": {
+          "scenarioTitle": "Rs 10,000 Base Price, 18% GST",
+          "scenarioText": "Base price Rs 10,000 | GST rate 18% | Intra-state sale, so CGST and SGST split equally.",
+          "steps": [
+            { "stepTitle": "Step 1: GST amount", "math": "Rs 10,000 x 0.18 = Rs 1,800", "explanation": "The GST amount is 18% of the base price." },
+            { "stepTitle": "Step 2: Total price", "math": "Rs 10,000 + Rs 1,800 = Rs 11,800", "explanation": "The customer pays Rs 11,800 in total." },
+            { "stepTitle": "Step 3: Split for an intra-state sale", "math": "CGST = Rs 1,800 / 2 = Rs 900; SGST = Rs 900", "explanation": "For an inter-state sale, the same Rs 1,800 would instead be charged as IGST, with no CGST or SGST split." },
+            { "stepTitle": "Step 4: Check the reverse direction", "math": "Rs 11,800 / 1.18 = Rs 10,000; GST = Rs 11,800 - Rs 10,000 = Rs 1,800", "explanation": "Dividing by 1.18 recovers the same base price. Subtracting 18% of Rs 11,800 would wrongly give Rs 9,676, which is why the division method must be used." }
+          ],
+          "finalResult": "Total price Rs 11,800, of which GST is Rs 1,800 (CGST Rs 900 + SGST Rs 900 for an intra-state sale, or IGST Rs 1,800 for an inter-state sale)."
+        }
+      },
+      {
+        "id": "gst-rates",
+        "heading": "3. GST at Different Rates on the Same Base Price",
+        "badge": "Comparison",
+        "paragraphs": [
+          "The table below keeps the same Rs 10,000 base price and shows how the total changes with the rate. It also shows why a small rate change matters on a large purchase."
+        ],
+        "table": {
+          "title": "GST on a Rs 10,000 Base Price by Rate",
+          "headers": ["GST Rate", "GST Amount", "Total Price"],
+          "rows": [
+            ["0%", "Rs 0", "Rs 10,000"],
+            ["5%", "Rs 500", "Rs 10,500"],
+            ["12%", "Rs 1,200", "Rs 11,200"],
+            ["18%", "Rs 1,800", "Rs 11,800"],
+            ["28%", "Rs 2,800", "Rs 12,800"]
+          ]
+        },
+        "callout": { "type": "warning", "title": "Check the rate for the item", "text": "GST rates are set by category, and some items are exempt or taxed at a different rate. This guide shows the maths once the rate is known; it does not decide which rate applies to a specific product or service." },
+        "pitfalls": [
+          { "mistake": "Removing GST by subtracting the rate percentage from the inclusive price", "fix": "Divide the inclusive price by (1 + rate) instead, as shown in the worked example." },
+          { "mistake": "Assuming 18% applies to everything", "fix": "Check the rate for the specific category, which may be 0%, 5%, 12% or 28%." },
+          { "mistake": "Splitting IGST into CGST and SGST", "fix": "IGST applies to inter-state sales at the full rate. The CGST/SGST split applies only to intra-state sales." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate GST on a price?", "answer": "Multiply the base price by the GST rate to get the GST amount, then add it to the base price. For Rs 10,000 at 18%, GST is Rs 1,800 and the total is Rs 11,800." },
+      { "question": "How do I remove GST from a price that already includes it?", "answer": "Divide the inclusive price by (1 + rate). For Rs 11,800 inclusive of 18% GST, the base price is Rs 11,800 / 1.18 = Rs 10,000, so GST is Rs 1,800." },
+      { "question": "What is the difference between CGST, SGST and IGST?", "answer": "CGST and SGST are the equal halves of GST on intra-state sales, going to the central and state governments. IGST is the full GST on inter-state sales, collected centrally and shared." }
+    ]
   }
 };

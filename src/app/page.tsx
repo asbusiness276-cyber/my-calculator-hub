@@ -127,7 +127,7 @@ export default function Home() {
             The Ultimate Hub for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-pink-400">Free Online Calculators</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto font-normal leading-relaxed">
-            Fast, mathematically verified, and 100% free calculators for finance, health, academics, and daily math. Zero registration, instant outputs, and absolute privacy.
+            Fast, mathematically verified, and 100% free calculators for finance, health, academics, and daily math. Zero registration, instant outputs, and in-browser calculation privacy.
           </p>
           
           {/* Interactive Live Search Bar */}

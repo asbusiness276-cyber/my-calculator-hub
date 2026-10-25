@@ -95,7 +95,7 @@ export default function RootLayout({
               <div className="space-y-4 md:col-span-1">
                 <BrandLogo variant="dark" size="md" />
                 <p className="text-sm text-gray-400 leading-relaxed pt-2">
-                  Your trusted suite of 260+ free online calculators. Engineered for mathematical precision, instant responsiveness, and zero server tracking.
+                  Your trusted suite of 260+ free online calculators. Engineered for mathematical precision, instant responsiveness, and no calculation-input tracking.
                 </p>
                 <div className="flex items-center gap-2 text-xs text-emerald-400 font-semibold pt-1">
                   <ShieldCheck className="w-4 h-4 text-emerald-400" />

@@ -227,7 +227,7 @@ export default function Header() {
           </div>
           <div className="pt-4 border-t border-gray-200 flex flex-col gap-3 font-semibold text-sm">
             <Link href="/category" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-indigo-600">All Categories Directory</Link>
-            <Link href="/articles" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-indigo-600">100+ Educational Articles</Link>
+            <Link href="/articles" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-indigo-600">Educational Articles</Link>
             <Link href="/author" onClick={() => setIsMobileMenuOpen(false)} className="text-indigo-600 font-bold">Author Profile (Saahil)</Link>
             <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-indigo-600">About Us</Link>
             <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-800 hover:text-indigo-600">Contact Support</Link>

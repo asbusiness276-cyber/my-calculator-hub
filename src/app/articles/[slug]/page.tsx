@@ -20,13 +20,13 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   if (articleRedirects[slug]) {
-    return { title: "Redirecting... | My Calculator Hub" };
+    return { title: "Redirecting..." };
   }
   const article = getArticle(slug);
-  if (!article) return { title: "Article Not Found | My Calculator Hub" };
+  if (!article) return { title: "Article Not Found" };
 
   return {
-    title: `${article.title} - Expert Guide | My Calculator Hub`,
+    title: `${article.title} - Expert Guide`,
     description: article.excerpt,
     authors: [{ name: "Saahil Sharma", url: "https://mycalculatorhub.pro/author" }],
     alternates: {

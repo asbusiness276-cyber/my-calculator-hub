@@ -66,10 +66,18 @@ export default async function ArticlePage({ params }: Props) {
   }
 
   // Find relevant calculators
+  // Explicit overrides for titles where generic keyword matching picks the
+  // wrong tools. Example: the WAM guide title drops "wam" (3 letters) in the
+  // filter below, so SIP came first and WAM was cut out of the tools box.
+  const relatedOverrides: Record<string, string[]> = {
+    "how-to-calculate-wam": ["wam-calculator", "semester-wam-calculator", "wam-to-gpa-calculator"],
+  };
   const terms = article.title.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
-  let relatedCalculators = calculators
-    .filter((tool) => terms.some((term) => tool.title.toLowerCase().includes(term) || tool.slug.includes(term)))
-    .slice(0, 6);
+  let relatedCalculators = relatedOverrides[slug]
+    ? calculators.filter((tool) => relatedOverrides[slug].includes(tool.slug))
+    : calculators
+        .filter((tool) => terms.some((term) => tool.title.toLowerCase().includes(term) || tool.slug.includes(term)))
+        .slice(0, 6);
 
   if (relatedCalculators.length < 3) {
     const fallbackCategory = article.category.includes("Finance")

@@ -89,7 +89,7 @@ export default function Home() {
             "name": "Is my data safe when using these tools?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "All calculations execute locally in your web browser. Your inputs are never transmitted, logged, or saved to remote databases, ensuring complete privacy.",
+              "text": "All calculations execute locally in your web browser. Your calculation inputs are never transmitted, logged, or saved to our servers. Visiting the site itself still involves standard hosting log files and cookies, including Google AdSense advertising cookies - see Privacy Policy sections 3-6.",
             },
           },
           {
@@ -400,7 +400,7 @@ export default function Home() {
                 </div>
                 <div className="bg-emerald-50/60 p-4 rounded-2xl border border-emerald-100">
                   <div className="text-2xl font-black text-emerald-600">100% In-Browser</div>
-                  <div className="text-xs text-emerald-900/70 font-semibold mt-0.5">Zero Server Logging</div>
+                  <div className="text-xs text-emerald-900/70 font-semibold mt-0.5">No Input Logging</div>
                 </div>
                 <div className="bg-purple-50/60 p-4 rounded-2xl border border-purple-100 col-span-2 sm:col-span-1">
                   <div className="text-2xl font-black text-purple-600">49 Guides</div>
@@ -473,7 +473,7 @@ export default function Home() {
                   </span>
                 </summary>
                 <div className="px-6 pb-6 text-gray-600 leading-relaxed text-sm md:text-base">
-                  <p>All calculations execute locally in your web browser. Your inputs are never transmitted, logged, or saved to remote databases, ensuring complete privacy.</p>
+                  <p>All calculations execute locally in your web browser. Your calculation inputs are never transmitted, logged, or saved to our servers. Visiting the site itself still involves standard hosting log files and cookies, including Google AdSense advertising cookies - see Privacy Policy sections 3-6.</p>
                 </div>
               </details>
 

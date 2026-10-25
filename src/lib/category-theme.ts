@@ -1,0 +1,336 @@
+export interface CategoryTheme {
+  id: string;
+  name: string;
+  slug: string;
+  shortDesc: string;
+  badgeText: string;
+  // Gradients
+  heroGradient: string;
+  cardGradient: string;
+  pillGradient: string;
+  accentGlow: string;
+  ambientBg: string;
+  // CSS Classes
+  primaryHex: string;
+  secondaryHex: string;
+  textPrimary: string;
+  textDark: string;
+  bgLight: string;
+  bgMuted: string;
+  borderLight: string;
+  borderHover: string;
+  ringFocus: string;
+  btnPrimary: string;
+  btnGradient: string;
+  resultCard: string;
+  badgeClass: string;
+  iconBg: string;
+  iconColor: string;
+  glowClass: string;
+}
+
+export const CATEGORY_THEMES: Record<string, CategoryTheme> = {
+  "finance-and-investment": {
+    id: "finance-and-investment",
+    name: "Finance & Investment",
+    slug: "finance-and-investment",
+    shortDesc: "SIP, EMI, PPF, APY, compound interest & wealth creation calculators.",
+    badgeText: "Wealth & Banking",
+    heroGradient: "from-emerald-950 via-teal-900 to-slate-950",
+    cardGradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
+    pillGradient: "from-emerald-500 to-teal-600",
+    accentGlow: "rgba(16, 185, 129, 0.2)",
+    ambientBg: "from-emerald-500/10 via-teal-500/5 to-transparent",
+    primaryHex: "#059669",
+    secondaryHex: "#0d9488",
+    textPrimary: "text-emerald-600",
+    textDark: "text-emerald-950",
+    bgLight: "bg-emerald-50",
+    bgMuted: "bg-emerald-100/70",
+    borderLight: "border-emerald-200/80",
+    borderHover: "hover:border-emerald-400",
+    ringFocus: "focus:ring-emerald-500 focus:border-emerald-500",
+    btnPrimary: "bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/25",
+    btnGradient: "bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white shadow-lg shadow-emerald-600/25",
+    resultCard: "bg-gradient-to-br from-emerald-600 via-teal-700 to-slate-900 text-white border border-emerald-400/30",
+    badgeClass: "bg-emerald-50 text-emerald-800 border border-emerald-200",
+    iconBg: "bg-emerald-100 text-emerald-700",
+    iconColor: "text-emerald-600",
+    glowClass: "group-hover:shadow-emerald-500/20",
+  },
+  "health-and-fitness": {
+    id: "health-and-fitness",
+    name: "Health & Fitness",
+    slug: "health-and-fitness",
+    shortDesc: "BMI, BMR, TDEE, calories, body fat & healthy lifestyle planners.",
+    badgeText: "Wellness & Vitality",
+    heroGradient: "from-rose-950 via-pink-950 to-slate-950",
+    cardGradient: "from-rose-500/10 via-pink-500/5 to-transparent",
+    pillGradient: "from-rose-500 to-pink-600",
+    accentGlow: "rgba(244, 63, 94, 0.2)",
+    ambientBg: "from-rose-500/10 via-pink-500/5 to-transparent",
+    primaryHex: "#e11d48",
+    secondaryHex: "#db2777",
+    textPrimary: "text-rose-600",
+    textDark: "text-rose-950",
+    bgLight: "bg-rose-50",
+    bgMuted: "bg-rose-100/70",
+    borderLight: "border-rose-200/80",
+    borderHover: "hover:border-rose-400",
+    ringFocus: "focus:ring-rose-500 focus:border-rose-500",
+    btnPrimary: "bg-rose-600 hover:bg-rose-700 text-white shadow-rose-600/25",
+    btnGradient: "bg-gradient-to-r from-rose-600 to-pink-600 hover:from-rose-700 hover:to-pink-700 text-white shadow-lg shadow-rose-600/25",
+    resultCard: "bg-gradient-to-br from-rose-600 via-pink-700 to-slate-900 text-white border border-rose-400/30",
+    badgeClass: "bg-rose-50 text-rose-800 border border-rose-200",
+    iconBg: "bg-rose-100 text-rose-700",
+    iconColor: "text-rose-600",
+    glowClass: "group-hover:shadow-rose-500/20",
+  },
+  "academic-and-students": {
+    id: "academic-and-students",
+    name: "Academic & Students",
+    slug: "academic-and-students",
+    shortDesc: "WAM, GPA, CGPA to percentage, weighted marks & grade calculators.",
+    badgeText: "Education & GPA",
+    heroGradient: "from-indigo-950 via-blue-950 to-slate-950",
+    cardGradient: "from-indigo-500/10 via-blue-500/5 to-transparent",
+    pillGradient: "from-indigo-500 to-violet-600",
+    accentGlow: "rgba(99, 102, 241, 0.2)",
+    ambientBg: "from-indigo-500/10 via-violet-500/5 to-transparent",
+    primaryHex: "#4f46e5",
+    secondaryHex: "#7c3aed",
+    textPrimary: "text-indigo-600",
+    textDark: "text-indigo-950",
+    bgLight: "bg-indigo-50",
+    bgMuted: "bg-indigo-100/70",
+    borderLight: "border-indigo-200/80",
+    borderHover: "hover:border-indigo-400",
+    ringFocus: "focus:ring-indigo-500 focus:border-indigo-500",
+    btnPrimary: "bg-indigo-600 hover:bg-indigo-700 text-white shadow-indigo-600/25",
+    btnGradient: "bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white shadow-lg shadow-indigo-600/25",
+    resultCard: "bg-gradient-to-br from-indigo-600 via-violet-700 to-slate-900 text-white border border-indigo-400/30",
+    badgeClass: "bg-indigo-50 text-indigo-800 border border-indigo-200",
+    iconBg: "bg-indigo-100 text-indigo-700",
+    iconColor: "text-indigo-600",
+    glowClass: "group-hover:shadow-indigo-500/20",
+  },
+  "daily-utility-and-math": {
+    id: "daily-utility-and-math",
+    name: "Daily Utility & Math",
+    slug: "daily-utility-and-math",
+    shortDesc: "Percentage, age, date difference, tip splitting & daily life calculators.",
+    badgeText: "Everyday Math",
+    heroGradient: "from-amber-950 via-orange-950 to-slate-950",
+    cardGradient: "from-amber-500/10 via-orange-500/5 to-transparent",
+    pillGradient: "from-amber-500 to-orange-600",
+    accentGlow: "rgba(245, 158, 11, 0.2)",
+    ambientBg: "from-amber-500/10 via-orange-500/5 to-transparent",
+    primaryHex: "#d97706",
+    secondaryHex: "#ea580c",
+    textPrimary: "text-amber-600",
+    textDark: "text-amber-950",
+    bgLight: "bg-amber-50",
+    bgMuted: "bg-amber-100/70",
+    borderLight: "border-amber-200/80",
+    borderHover: "hover:border-amber-400",
+    ringFocus: "focus:ring-amber-500 focus:border-amber-500",
+    btnPrimary: "bg-amber-600 hover:bg-amber-700 text-white shadow-amber-600/25",
+    btnGradient: "bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white shadow-lg shadow-amber-600/25",
+    resultCard: "bg-gradient-to-br from-amber-600 via-orange-700 to-slate-900 text-white border border-amber-400/30",
+    badgeClass: "bg-amber-50 text-amber-800 border border-amber-200",
+    iconBg: "bg-amber-100 text-amber-700",
+    iconColor: "text-amber-600",
+    glowClass: "group-hover:shadow-amber-500/20",
+  },
+  "science-and-chemistry": {
+    id: "science-and-chemistry",
+    name: "Science & Chemistry",
+    slug: "science-and-chemistry",
+    shortDesc: "Molarity, dilution, pH, ideal gas law, density & atomic calculators.",
+    badgeText: "Lab & Molecular",
+    heroGradient: "from-cyan-950 via-teal-950 to-slate-950",
+    cardGradient: "from-cyan-500/10 via-teal-500/5 to-transparent",
+    pillGradient: "from-cyan-500 to-teal-600",
+    accentGlow: "rgba(6, 182, 212, 0.2)",
+    ambientBg: "from-cyan-500/10 via-teal-500/5 to-transparent",
+    primaryHex: "#0891b2",
+    secondaryHex: "#0d9488",
+    textPrimary: "text-cyan-600",
+    textDark: "text-cyan-950",
+    bgLight: "bg-cyan-50",
+    bgMuted: "bg-cyan-100/70",
+    borderLight: "border-cyan-200/80",
+    borderHover: "hover:border-cyan-400",
+    ringFocus: "focus:ring-cyan-500 focus:border-cyan-500",
+    btnPrimary: "bg-cyan-600 hover:bg-cyan-700 text-white shadow-cyan-600/25",
+    btnGradient: "bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white shadow-lg shadow-cyan-600/25",
+    resultCard: "bg-gradient-to-br from-cyan-600 via-teal-700 to-slate-900 text-white border border-cyan-400/30",
+    badgeClass: "bg-cyan-50 text-cyan-800 border border-cyan-200",
+    iconBg: "bg-cyan-100 text-cyan-700",
+    iconColor: "text-cyan-600",
+    glowClass: "group-hover:shadow-cyan-500/20",
+  },
+  "physics-and-engineering": {
+    id: "physics-and-engineering",
+    name: "Physics & Engineering",
+    slug: "physics-and-engineering",
+    shortDesc: "Ohm's law, velocity, acceleration, force, kinetic energy & circuits.",
+    badgeText: "Quantum & Mechanics",
+    heroGradient: "from-purple-950 via-fuchsia-950 to-slate-950",
+    cardGradient: "from-purple-500/10 via-fuchsia-500/5 to-transparent",
+    pillGradient: "from-purple-500 to-fuchsia-600",
+    accentGlow: "rgba(168, 85, 247, 0.2)",
+    ambientBg: "from-purple-500/10 via-fuchsia-500/5 to-transparent",
+    primaryHex: "#9333ea",
+    secondaryHex: "#c026d3",
+    textPrimary: "text-purple-600",
+    textDark: "text-purple-950",
+    bgLight: "bg-purple-50",
+    bgMuted: "bg-purple-100/70",
+    borderLight: "border-purple-200/80",
+    borderHover: "hover:border-purple-400",
+    ringFocus: "focus:ring-purple-500 focus:border-purple-500",
+    btnPrimary: "bg-purple-600 hover:bg-purple-700 text-white shadow-purple-600/25",
+    btnGradient: "bg-gradient-to-r from-purple-600 to-fuchsia-600 hover:from-purple-700 hover:to-fuchsia-700 text-white shadow-lg shadow-purple-600/25",
+    resultCard: "bg-gradient-to-br from-purple-600 via-fuchsia-700 to-slate-900 text-white border border-purple-400/30",
+    badgeClass: "bg-purple-50 text-purple-800 border border-purple-200",
+    iconBg: "bg-purple-100 text-purple-700",
+    iconColor: "text-purple-600",
+    glowClass: "group-hover:shadow-purple-500/20",
+  },
+  "construction-and-real-estate": {
+    id: "construction-and-real-estate",
+    name: "Construction & Real Estate",
+    slug: "construction-and-real-estate",
+    shortDesc: "Brick estimation, concrete volume, tile quantity & material takeoff.",
+    badgeText: "Structure & Build",
+    heroGradient: "from-orange-950 via-stone-950 to-slate-950",
+    cardGradient: "from-orange-500/10 via-amber-500/5 to-transparent",
+    pillGradient: "from-orange-500 to-amber-600",
+    accentGlow: "rgba(234, 88, 12, 0.2)",
+    ambientBg: "from-orange-500/10 via-amber-500/5 to-transparent",
+    primaryHex: "#c2410c",
+    secondaryHex: "#d97706",
+    textPrimary: "text-orange-600",
+    textDark: "text-orange-950",
+    bgLight: "bg-orange-50",
+    bgMuted: "bg-orange-100/70",
+    borderLight: "border-orange-200/80",
+    borderHover: "hover:border-orange-400",
+    ringFocus: "focus:ring-orange-500 focus:border-orange-500",
+    btnPrimary: "bg-orange-600 hover:bg-orange-700 text-white shadow-orange-600/25",
+    btnGradient: "bg-gradient-to-r from-orange-600 to-amber-600 hover:from-orange-700 hover:to-amber-700 text-white shadow-lg shadow-orange-600/25",
+    resultCard: "bg-gradient-to-br from-orange-600 via-amber-700 to-slate-900 text-white border border-orange-400/30",
+    badgeClass: "bg-orange-50 text-orange-800 border border-orange-200",
+    iconBg: "bg-orange-100 text-orange-700",
+    iconColor: "text-orange-600",
+    glowClass: "group-hover:shadow-orange-500/20",
+  },
+  "statistics-and-probability": {
+    id: "statistics-and-probability",
+    name: "Statistics & Probability",
+    slug: "statistics-and-probability",
+    shortDesc: "Z-score, standard deviation, mean, median & probability distributions.",
+    badgeText: "Data & Inference",
+    heroGradient: "from-blue-950 via-indigo-950 to-slate-950",
+    cardGradient: "from-blue-500/10 via-indigo-500/5 to-transparent",
+    pillGradient: "from-blue-500 to-indigo-600",
+    accentGlow: "rgba(59, 130, 246, 0.2)",
+    ambientBg: "from-blue-500/10 via-indigo-500/5 to-transparent",
+    primaryHex: "#2563eb",
+    secondaryHex: "#4f46e5",
+    textPrimary: "text-blue-600",
+    textDark: "text-blue-950",
+    bgLight: "bg-blue-50",
+    bgMuted: "bg-blue-100/70",
+    borderLight: "border-blue-200/80",
+    borderHover: "hover:border-blue-400",
+    ringFocus: "focus:ring-blue-500 focus:border-blue-500",
+    btnPrimary: "bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/25",
+    btnGradient: "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white shadow-lg shadow-blue-600/25",
+    resultCard: "bg-gradient-to-br from-blue-600 via-indigo-700 to-slate-900 text-white border border-blue-400/30",
+    badgeClass: "bg-blue-50 text-blue-800 border border-blue-200",
+    iconBg: "bg-blue-100 text-blue-700",
+    iconColor: "text-blue-600",
+    glowClass: "group-hover:shadow-blue-500/20",
+  },
+  "business-and-marketing": {
+    id: "business-and-marketing",
+    name: "Business & Marketing",
+    slug: "business-and-marketing",
+    shortDesc: "CPC, CPM, CTR, MRR, ARR, CAC, CLV, margin & ROAS performance metrics.",
+    badgeText: "Growth & Revenue",
+    heroGradient: "from-violet-950 via-fuchsia-950 to-slate-950",
+    cardGradient: "from-violet-500/10 via-fuchsia-500/5 to-transparent",
+    pillGradient: "from-violet-500 to-fuchsia-600",
+    accentGlow: "rgba(139, 92, 246, 0.2)",
+    ambientBg: "from-violet-500/10 via-fuchsia-500/5 to-transparent",
+    primaryHex: "#7c3aed",
+    secondaryHex: "#c026d3",
+    textPrimary: "text-violet-600",
+    textDark: "text-violet-950",
+    bgLight: "bg-violet-50",
+    bgMuted: "bg-violet-100/70",
+    borderLight: "border-violet-200/80",
+    borderHover: "hover:border-violet-400",
+    ringFocus: "focus:ring-violet-500 focus:border-violet-500",
+    btnPrimary: "bg-violet-600 hover:bg-violet-700 text-white shadow-violet-600/25",
+    btnGradient: "bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-lg shadow-violet-600/25",
+    resultCard: "bg-gradient-to-br from-violet-600 via-fuchsia-700 to-slate-900 text-white border border-violet-400/30",
+    badgeClass: "bg-violet-50 text-violet-800 border border-violet-200",
+    iconBg: "bg-violet-100 text-violet-700",
+    iconColor: "text-violet-600",
+    glowClass: "group-hover:shadow-violet-500/20",
+  },
+  "text-and-developer-tools": {
+    id: "text-and-developer-tools",
+    name: "Text & Developer Tools",
+    slug: "text-and-developer-tools",
+    shortDesc: "Word count, character analysis, reading time, code tools & string helpers.",
+    badgeText: "Dev & Typography",
+    heroGradient: "from-emerald-950 via-slate-950 to-slate-950",
+    cardGradient: "from-emerald-500/10 via-teal-500/5 to-transparent",
+    pillGradient: "from-emerald-500 to-cyan-600",
+    accentGlow: "rgba(16, 185, 129, 0.2)",
+    ambientBg: "from-emerald-500/10 via-cyan-500/5 to-transparent",
+    primaryHex: "#059669",
+    secondaryHex: "#0891b2",
+    textPrimary: "text-emerald-600",
+    textDark: "text-emerald-950",
+    bgLight: "bg-emerald-50",
+    bgMuted: "bg-emerald-100/70",
+    borderLight: "border-emerald-200/80",
+    borderHover: "hover:border-emerald-400",
+    ringFocus: "focus:ring-emerald-500 focus:border-emerald-500",
+    btnPrimary: "bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/25",
+    btnGradient: "bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-700 hover:to-cyan-700 text-white shadow-lg shadow-emerald-600/25",
+    resultCard: "bg-gradient-to-br from-emerald-600 via-teal-700 to-slate-900 text-white border border-emerald-400/30",
+    badgeClass: "bg-emerald-50 text-emerald-800 border border-emerald-200",
+    iconBg: "bg-emerald-100 text-emerald-700",
+    iconColor: "text-emerald-600",
+    glowClass: "group-hover:shadow-emerald-500/20",
+  },
+};
+
+export const DEFAULT_THEME = CATEGORY_THEMES["finance-and-investment"];
+
+export function getCategoryTheme(categoryNameOrSlug: string | undefined): CategoryTheme {
+  if (!categoryNameOrSlug) return DEFAULT_THEME;
+  const norm = categoryNameOrSlug.toLowerCase().trim().replace(/&/g, "and").replace(/ /g, "-");
+
+  if (CATEGORY_THEMES[norm]) return CATEGORY_THEMES[norm];
+
+  // Match by keyword
+  if (norm.includes("finance") || norm.includes("invest")) return CATEGORY_THEMES["finance-and-investment"];
+  if (norm.includes("health") || norm.includes("fitness")) return CATEGORY_THEMES["health-and-fitness"];
+  if (norm.includes("academic") || norm.includes("student") || norm.includes("gpa") || norm.includes("grade")) return CATEGORY_THEMES["academic-and-students"];
+  if (norm.includes("math") || norm.includes("utility") || norm.includes("daily") || norm.includes("lifestyle")) return CATEGORY_THEMES["daily-utility-and-math"];
+  if (norm.includes("chemistry") || norm.includes("science")) return CATEGORY_THEMES["science-and-chemistry"];
+  if (norm.includes("physics") || norm.includes("engineer")) return CATEGORY_THEMES["physics-and-engineering"];
+  if (norm.includes("construct") || norm.includes("real-estate") || norm.includes("build")) return CATEGORY_THEMES["construction-and-real-estate"];
+  if (norm.includes("stat") || norm.includes("probab")) return CATEGORY_THEMES["statistics-and-probability"];
+  if (norm.includes("business") || norm.includes("market") || norm.includes("saas") || norm.includes("ecommerce")) return CATEGORY_THEMES["business-and-marketing"];
+  if (norm.includes("text") || norm.includes("dev") || norm.includes("code")) return CATEGORY_THEMES["text-and-developer-tools"];
+
+  return DEFAULT_THEME;
+}

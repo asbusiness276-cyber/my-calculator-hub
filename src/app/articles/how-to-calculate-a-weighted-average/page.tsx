@@ -6,7 +6,7 @@ import AuthorBio from "@/components/AuthorBio";
 import { BookOpen, Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How to Calculate a Weighted Average: The Ultimate 2026 Guide | My Calculator Hub",
+  title: "How to Calculate a Weighted Average: The Ultimate 2026 Guide",
   description: "A complete step-by-step masterclass on calculating weighted averages for finance, inventory valuation (WAC), and university grades. Includes formulas, Excel models, and worked examples.",
   authors: [{ name: "Saahil", url: "https://mycalculatorhub.pro/author" }],
   alternates: {

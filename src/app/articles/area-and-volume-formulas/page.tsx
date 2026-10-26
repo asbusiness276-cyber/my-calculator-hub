@@ -6,7 +6,7 @@ import AuthorBio from "@/components/AuthorBio";
 import { BookOpen, Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Complete Area and Volume Formulas Cheat Sheet 2026 | My Calculator Hub",
+  title: "Complete Area and Volume Formulas Cheat Sheet 2026",
   description: "Your ultimate reference guide for every 2D area and 3D volume formula. From basic rectangles and circles to complex spheres and cones. Perfect for students and professionals.",
   authors: [{ name: "Saahil", url: "https://mycalculatorhub.pro/author" }],
   alternates: {

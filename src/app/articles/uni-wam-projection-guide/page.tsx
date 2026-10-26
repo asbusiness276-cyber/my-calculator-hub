@@ -6,7 +6,7 @@ import AuthorBio from "@/components/AuthorBio";
 import { BookOpen, Calendar, Clock, User, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "University WAM Projection Guide (Weighted Average Mark) | My Calculator Hub",
+  title: "University WAM Projection Guide (Weighted Average Mark)",
   description: "Learn the exact mathematical strategies and formulas to calculate, project, and improve your university WAM for competitive honours programs and graduate jobs.",
   authors: [{ name: "Saahil", url: "https://mycalculatorhub.pro/author" }],
   alternates: {

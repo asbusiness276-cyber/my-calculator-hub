@@ -76,6 +76,7 @@ export default async function ArticlePage({ params }: Props) {
     "how-to-calculate-sip": ["sip-calculator", "compound-interest-calculator", "ppf-calculator"],
     "how-to-calculate-ppf": ["ppf-calculator", "sip-calculator", "compound-interest-calculator"],
     "how-to-calculate-gst": ["gst-calculator", "tax-calculator", "sales-tax-calculator"],
+    "mortgage-repayment-guide": ["mortgage-calculator", "loan-calculator", "emi-calculator"],
   };
   const terms = article.title.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
   let relatedCalculators = relatedOverrides[slug]

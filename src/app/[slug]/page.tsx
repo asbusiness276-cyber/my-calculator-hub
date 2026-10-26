@@ -42,7 +42,7 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
   const calc = calculators.find((c) => c.slug === params.slug);
 
   if (!calc) {
-    return { title: "Calculator Not Found | My Calculator Hub" };
+    return { title: "Calculator Not Found" };
   }
 
   const cleanTitle = calc.title.split(" -")[0].replace("Free ", "").replace(" 2026", "");

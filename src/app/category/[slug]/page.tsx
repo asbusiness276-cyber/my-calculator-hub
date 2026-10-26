@@ -103,7 +103,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const categoryName = unslugifyCategory(slug) || "Online";
 
   return {
-    title: `${categoryName} Calculators - Free Online Tools | My Calculator Hub`,
+    title: `${categoryName} Calculators - Free Online Tools`,
     description: `Discover our free ${categoryName.toLowerCase()} calculators. Fast, accurate, and easy to use online tools with instant client-side results.`,
     authors: [{ name: "Saahil", url: "https://mycalculatorhub.pro/author" }],
     alternates: {

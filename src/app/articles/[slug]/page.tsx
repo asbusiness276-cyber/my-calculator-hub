@@ -80,6 +80,8 @@ export default async function ArticlePage({ params }: Props) {
     "how-much-emergency-fund": ["emergency-fund-calculator", "savings-goal-calculator", "budget-calculator"],
     "salary-to-hourly-rate-guide": ["salary-calculator", "hourly-to-salary-calculator", "salary-to-hourly-calculator"],
     "apr-vs-apy-explained": ["apy-calculator", "apr-calculator", "compound-interest-calculator"],
+    "hecs-help-debt-explained": ["hecs-debt-calculator", "hecs-indexation-calculator", "hecs-repayment-time-calculator"],
+    "credit-card-payoff-strategies": ["credit-card-payoff-calculator", "debt-to-income-calculator", "loan-calculator"],
   };
   const terms = article.title.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
   let relatedCalculators = relatedOverrides[slug]

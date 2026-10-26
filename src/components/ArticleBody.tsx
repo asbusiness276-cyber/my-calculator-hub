@@ -30,17 +30,15 @@ export function getArticleToc(article: Article): [string, string][] {
     return list;
   }
 
+  // Only sections the generic fallback actually renders. Previously this
+  // promised 03-07 sections that the fallback never outputs, creating
+  // broken TOC anchors on every generic guide.
   return [
     ["summary", "01. Key Takeaways"],
     ["definition", "02. Core Definition"],
-    ["why-it-matters", "03. Strategic Significance"],
-    ["framework", "04. Step-by-Step Framework"],
-    ["formula", "05. Formula & Variables"],
-    ["example", "06. Worked Numerical Example"],
-    ["interpretation", "07. Result Interpretation"],
-    ["tools", "08. Recommended Calculators"],
-    ["faq", "09. Frequently Asked Questions"],
-    ["editorial", "10. Editorial Methodology"],
+    ["tools", "Recommended Calculators"],
+    ["faq", "Frequently Asked Questions"],
+    ["editorial", "Editorial Methodology"],
   ];
 }
 

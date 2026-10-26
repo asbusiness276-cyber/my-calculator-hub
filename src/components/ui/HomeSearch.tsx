@@ -37,7 +37,7 @@ export default function HomeSearch({ calculators }: { calculators: CalculatorMet
         <input
           type="text"
           className="block w-full pl-14 pr-12 py-5 rounded-full border-2 border-white bg-white focus:outline-none focus:ring-4 focus:ring-blue-300 text-gray-900 text-lg font-bold placeholder-gray-400 transition-all shadow-xl"
-          placeholder="Search 250+ calculators (e.g. SIP, EMI, Salary, BMI)..."
+          placeholder="Search 260+ calculators (e.g. SIP, EMI, Salary, BMI)..."
           value={query}
           onFocus={() => setIsOpen(true)}
           onChange={(e) => {

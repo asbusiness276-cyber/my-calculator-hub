@@ -1525,4 +1525,161 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "Where should I keep my emergency fund?", "answer": "In a separate, easily accessible savings account, not in investments that can fall in value or in everyday spending money." }
     ]
   },
+  "salary-to-hourly-rate-guide": {
+    "slug": "salary-to-hourly-rate-guide",
+    "leadParagraph": "Converting a salary to an hourly rate means dividing annual pay by the number of hours actually worked in a year. The usual shortcut is 40 hours a week for 52 weeks, or 2,080 hours a year, but that shortcut is wrong if you work different hours, take unpaid leave, or are paid for overtime separately.",
+    "keyTakeaways": [
+      "Hourly rate = Annual salary / (Hours worked per week x Weeks worked per year). For 40 hours a week for 52 weeks, the divisor is 2,080 hours.",
+      "Use hours actually worked, not hours in a calendar year, and adjust for unpaid leave, part-time hours or overtime rules.",
+      "Overtime is usually paid at a higher rate, commonly 1.5 times the regular hourly rate, and must not be averaged into the base rate.",
+      "Comparing two jobs by salary alone is misleading if their weekly hours differ: a lower salary with fewer hours can be a higher hourly rate."
+    ],
+    "sections": [
+      {
+        "id": "salary-formula",
+        "heading": "1. The Salary to Hourly Rate Formula",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Start with gross annual salary, then divide by total hours worked in the year. If you are paid weekly, you can also divide weekly pay by weekly hours. Do not use 8,760 hours (the number of hours in a year) as the divisor, because that includes nights, weekends and holidays when you are not working."
+        ],
+        "formulaBox": {
+          "title": "Salary to Hourly Rate Formula",
+          "formula": "Hourly Rate = Annual Salary / (Hours per Week x Weeks per Year)",
+          "variables": [
+            { "symbol": "Annual Salary", "meaning": "Gross annual pay before tax and deductions" },
+            { "symbol": "Hours per Week", "meaning": "Hours actually worked each week" },
+            { "symbol": "Weeks per Year", "meaning": "Weeks worked in the year, after unpaid leave" },
+            { "symbol": "Hourly Rate", "meaning": "Pay per hour worked, before tax" }
+          ]
+        }
+      },
+      {
+        "id": "salary-worked-example",
+        "heading": "2. Worked Example: $80,000 Salary at 40 Hours per Week",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take an annual salary of $80,000, working 40 hours per week for 52 weeks, with no unpaid leave and no overtime in the base calculation."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$80,000 per Year, 40 Hours per Week, 52 Weeks",
+          "scenarioText": "Annual salary $80,000 | Hours 40 per week | Weeks 52 per year | No unpaid leave in this example.",
+          "steps": [
+            { "stepTitle": "Step 1: Total hours worked in the year", "math": "40 x 52 = 2,080 hours", "explanation": "This is the standard full-time divisor used in many salary conversions." },
+            { "stepTitle": "Step 2: Hourly rate", "math": "$80,000 / 2,080 = $38.46 per hour", "explanation": "Rounded to the nearest cent; the unrounded value is $38.4615 per hour." },
+            { "stepTitle": "Step 3: Weekly, monthly and daily equivalents", "math": "Weekly $80,000 / 52 = $1,538.46; Monthly $80,000 / 12 = $6,666.67; Daily (5 days) $80,000 / 260 = $307.69", "explanation": "These are gross figures before tax, using 260 working days in a 5-day week year." },
+            { "stepTitle": "Step 4: Overtime rate at 1.5 times", "math": "$38.46 x 1.5 = $57.69 per hour", "explanation": "Overtime rates vary by contract and law; 1.5 times is a common example, not a universal rule." }
+          ],
+          "finalResult": "Hourly rate: $38.46 per hour for $80,000 at 40 hours per week. Weekly $1,538.46, monthly $6,666.67, daily $307.69, overtime at 1.5 times $57.69 per hour."
+        },
+        "table": {
+          "title": "Hourly Rates at 40 Hours per Week, 52 Weeks",
+          "headers": ["Annual Salary", "Hourly Rate", "Weekly Pay"],
+          "rows": [
+            ["$50,000", "$24.04", "$961.54"],
+            ["$60,000", "$28.85", "$1,153.85"],
+            ["$80,000", "$38.46", "$1,538.46"],
+            ["$100,000", "$48.08", "$1,923.08"]
+          ]
+        }
+      },
+      {
+        "id": "salary-comparison-pitfalls",
+        "heading": "3. Comparing Jobs Fairly, and Mistakes to Avoid",
+        "badge": "Comparison",
+        "paragraphs": [
+          "Two jobs with different weekly hours cannot be compared by salary alone. A $90,000 job at 50 hours a week is $34.62 per hour (90,000 / 2,600), which is less per hour than an $80,000 job at 40 hours a week ($38.46 per hour). Hours, leave, bonuses, overtime and benefits all change the real comparison, so convert to hourly rate first, then add those factors back in.",
+          "Also check whether salary includes bonuses or allowances, whether overtime is paid or unpaid, and whether weeks worked includes paid leave. If leave is paid, it is already in the salary and 52 weeks is correct; if leave is unpaid, subtract those weeks from the divisor."
+        ],
+        "callout": { "type": "warning", "title": "Gross, not take-home, pay", "text": "This guide converts gross salary. Tax, retirement contributions and other deductions reduce take-home pay, so the hourly rate here is not the amount received in hand per hour." },
+        "pitfalls": [
+          { "mistake": "Dividing by 8,760 hours in a year", "fix": "Divide by hours actually worked, commonly 2,080 for full-time work." },
+          { "mistake": "Ignoring unpaid leave", "fix": "Subtract unpaid weeks from weeks worked, which raises the hourly rate and reflects real hours." },
+          { "mistake": "Averaging overtime into the base rate", "fix": "Keep overtime separate at its own rate, commonly 1.5 times, instead of blending it into the base hourly rate." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I convert salary to hourly rate?", "answer": "Divide annual salary by hours worked in the year. For $80,000 at 40 hours per week for 52 weeks, that is $80,000 / 2,080 = $38.46 per hour." },
+      { "question": "What is the standard divisor for full-time work?", "answer": "2,080 hours, which is 40 hours per week multiplied by 52 weeks. Adjust it if you work different hours or take unpaid leave." },
+      { "question": "How is overtime calculated from an hourly rate?", "answer": "Multiply the regular hourly rate by the overtime multiplier in your contract or law. At 1.5 times, a $38.46 rate becomes $57.69 per hour for overtime." }
+    ]
+  },
+  "apr-vs-apy-explained": {
+    "slug": "apr-vs-apy-explained",
+    "leadParagraph": "APR and APY both describe interest rates, but they are not the same number. APR is the simple annual rate without compounding, while APY includes compounding, so APY is higher whenever interest is compounded more than once a year. Comparing a loan by APR and a savings account by APY without converting them is comparing two different things.",
+    "keyTakeaways": [
+      "APR = nominal annual rate, without compounding. APY = effective annual rate, with compounding included.",
+      "APY formula: APY = (1 + r / n)^n - 1, where r is the nominal annual rate and n is the number of compounding periods per year.",
+      "If interest compounds once a year, APR equals APY. If it compounds monthly, quarterly or daily, APY is higher than APR.",
+      "For borrowing, a lower APR usually means lower cost, but fees must also be checked. For saving, a higher APY usually means higher return, for the same nominal rate and compounding."
+    ],
+    "sections": [
+      {
+        "id": "apr-apy-formula",
+        "heading": "1. The APY Formula",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "APR is quoted as a simple annual rate: a 12% APR means 1% per month if compounded monthly, before compounding is counted. APY answers a different question: if you start with $100 and interest compounds as stated, how much will you actually have after one year, as a percentage? That is why APY is the effective rate, and APR is the nominal rate."
+        ],
+        "formulaBox": {
+          "title": "APY from APR Formula",
+          "formula": "APY = (1 + r / n)^n - 1",
+          "variables": [
+            { "symbol": "r", "meaning": "Nominal annual rate (APR), as a decimal" },
+            { "symbol": "n", "meaning": "Number of compounding periods per year (12 for monthly, 4 for quarterly, 1 for annual)" },
+            { "symbol": "APY", "meaning": "Effective annual yield, including compounding" }
+          ]
+        }
+      },
+      {
+        "id": "apr-apy-worked-example",
+        "heading": "2. Worked Example: 12% APR Compounded Monthly",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a nominal rate of 12% per year, compounded monthly, and compare it with the same rate compounded annually."
+        ],
+        "workedExample": {
+          "scenarioTitle": "12% APR, Monthly Compounding vs Annual Compounding",
+          "scenarioText": "Nominal rate 12% | Monthly compounding n = 12 | Annual compounding n = 1 | One year.",
+          "steps": [
+            { "stepTitle": "Step 1: Monthly rate", "math": "r / n = 0.12 / 12 = 0.01", "explanation": "The annual rate is split into 12 equal monthly periods." },
+            { "stepTitle": "Step 2: APY with monthly compounding", "math": "APY = (1.01)^12 - 1 = 0.1268 = 12.68%", "explanation": "Interest earned in earlier months itself earns interest in later months, adding 0.68 percentage points." },
+            { "stepTitle": "Step 3: APY with annual compounding", "math": "APY = (1.12)^1 - 1 = 12.00%", "explanation": "With only one compounding period, there is no extra compounding effect, so APY equals APR." },
+            { "stepTitle": "Step 4: What this means on $10,000", "math": "$10,000 at 12.68% APY = $11,268 after one year; at 12.00% = $11,200", "explanation": "The difference is $68 in one year on $10,000, purely from monthly compounding." }
+          ],
+          "finalResult": "12% APR compounded monthly equals 12.68% APY. The same 12% compounded annually equals 12.00% APY."
+        },
+        "table": {
+          "title": "APY for Different APRs, Compounded Monthly",
+          "headers": ["APR", "Monthly Rate", "APY (Monthly Compounding)"],
+          "rows": [
+            ["6%", "0.50%", "6.17%"],
+            ["12%", "1.00%", "12.68%"],
+            ["18%", "1.50%", "19.56%"],
+            ["24%", "2.00%", "26.82%"]
+          ]
+        }
+      },
+      {
+        "id": "apr-apy-borrow-save",
+        "heading": "3. Borrowing vs Saving: Which Number to Compare",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "When borrowing, lenders usually quote APR, because it is the simple cost rate before compounding, and it makes loans look cheaper when compounding is frequent. When saving, banks usually quote APY, because it includes compounding and makes returns look higher. That is not necessarily misleading, but it means you must convert both offers to the same basis before comparing them.",
+          "Also check fees separately: APR for some loans includes certain fees, while for others it does not, depending on the product and jurisdiction. The formula in this guide covers interest compounding only, not fees, taxes or charges, which must be checked in the product terms."
+        ],
+        "callout": { "type": "warning", "title": "Do not compare APR directly with APY", "text": "A 12% APR loan and a 12% APY savings account are not equal and opposite. Convert both to APY, or both to APR with the same compounding frequency, before comparing cost and return." },
+        "pitfalls": [
+          { "mistake": "Assuming APR and APY are interchangeable", "fix": "Convert with APY = (1 + r / n)^n - 1 before comparing any two rates." },
+          { "mistake": "Ignoring compounding frequency", "fix": "Monthly, quarterly and daily compounding give different APYs for the same APR, so always note n." },
+          { "mistake": "Ignoring fees", "fix": "Check product terms for fees separately, because this formula covers interest compounding only." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "What is the difference between APR and APY?", "answer": "APR is the nominal annual rate without compounding. APY is the effective annual rate with compounding included, calculated as (1 + r / n)^n - 1." },
+      { "question": "What is the APY for 12% APR compounded monthly?", "answer": "12.68%, because (1.01)^12 - 1 = 0.1268. The same 12% compounded annually is 12.00% APY." },
+      { "question": "Which is better for saving, APR or APY?", "answer": "Compare APY to APY. For the same nominal rate, more frequent compounding gives a higher APY, so a higher APY means a higher effective return, before fees." }
+    ]
+  },
 };

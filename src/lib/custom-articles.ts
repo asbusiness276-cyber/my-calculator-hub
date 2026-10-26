@@ -1370,4 +1370,82 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "What is the difference between CGST, SGST and IGST?", "answer": "CGST and SGST are the equal halves of GST on intra-state sales, going to the central and state governments. IGST is the full GST on inter-state sales, collected centrally and shared." }
     ]
   }
+  "mortgage-repayment-guide": {
+    "slug": "mortgage-repayment-guide",
+    "leadParagraph": "A mortgage repayment is a fixed monthly payment that covers both interest and principal over the life of the loan. Early payments are mostly interest, and only slowly shift toward principal, which is why the total interest on a long mortgage can exceed the amount originally borrowed.",
+    "keyTakeaways": [
+      "Monthly mortgage payment is calculated with the standard amortization formula: M = P x [r(1 + r)^n] / [(1 + r)^n - 1], where r is the monthly rate and n is the number of monthly payments.",
+      "A longer term lowers the monthly payment but sharply increases total interest, so the monthly payment alone does not show the full cost of the loan.",
+      "Extra principal payments, even small ones, reduce the balance that future interest is charged on and can shorten the loan.",
+      "The quoted rate, term, down payment and fees all change the result, so always check them before comparing two loan offers."
+    ],
+    "sections": [
+      {
+        "id": "mortgage-formula",
+        "heading": "1. The Mortgage Payment Formula",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "For a loan principal P, a monthly interest rate r and n monthly payments, the fixed monthly payment M is given by the amortization formula. The monthly rate is the annual rate divided by 12, and n is years multiplied by 12. This formula assumes a fixed rate and equal monthly payments with no extra fees, taxes or insurance in the payment itself."
+        ],
+        "formulaBox": {
+          "title": "Mortgage Monthly Payment Formula",
+          "formula": "M = P x [r(1 + r)^n] / [(1 + r)^n - 1]",
+          "variables": [
+            { "symbol": "P", "meaning": "Loan principal (amount borrowed after any down payment)" },
+            { "symbol": "r", "meaning": "Monthly interest rate, equal to annual rate divided by 12" },
+            { "symbol": "n", "meaning": "Total number of monthly payments (years x 12)" },
+            { "symbol": "M", "meaning": "Fixed monthly payment for principal and interest" }
+          ]
+        }
+      },
+      {
+        "id": "mortgage-worked-example",
+        "heading": "2. Worked Example: $400,000 at 6.5% for 30 Years",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a mortgage of $400,000 at a fixed annual rate of 6.5% for 30 years, repaid in equal monthly instalments with no extra payments."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$400,000, 6.5% Annual Rate, 30 Years",
+          "scenarioText": "Loan principal $400,000 | Annual rate 6.5% | Term 30 years (360 months) | Fixed rate, equal monthly payments.",
+          "steps": [
+            { "stepTitle": "Step 1: Find the monthly rate and number of payments", "math": "r = 0.065 / 12 = 0.0054167; n = 30 x 12 = 360", "explanation": "The annual rate is converted to a monthly rate, and years are converted to months." },
+            { "stepTitle": "Step 2: Apply the amortization formula", "math": "M = 400,000 x [0.0054167 x (1.0054167)^360] / [(1.0054167)^360 - 1] = $2,528", "explanation": "The payment is rounded to the nearest dollar; the unrounded value is $2,528.27." },
+            { "stepTitle": "Step 3: Total paid and total interest", "math": "Total paid = $2,528.27 x 360 = $910,178; Interest = $910,178 - $400,000 = $510,178", "explanation": "Total interest exceeds the original loan amount because the loan runs for 30 years." },
+            { "stepTitle": "Step 4: Why the first payment is mostly interest", "math": "Month 1 interest = $400,000 x 0.0054167 = $2,167; Principal in month 1 = $2,528 - $2,167 = $362", "explanation": "In the first year, about $25,868 goes to interest and only about $4,471 to principal, leaving a balance of about $395,529 after 12 payments." }
+          ],
+          "finalResult": "Monthly payment: $2,528 (principal and interest only). Total paid over 30 years: $910,178, of which $510,178 is interest. Taxes, insurance and fees, if any, are extra."
+        }
+      },
+      {
+        "id": "mortgage-amortization",
+        "heading": "3. How Amortization Works, and Why Term Matters",
+        "badge": "Amortization",
+        "paragraphs": [
+          "Amortization is the schedule by which each payment is split between interest and principal. Interest is always charged on the outstanding balance, so when the balance is high at the start, most of the payment is interest. As the balance falls, the interest portion falls and the principal portion rises, even though the total payment stays the same.",
+          "That is why shortening the term has such a large effect: a shorter term means the balance falls faster, so less interest accumulates. A longer term feels cheaper month to month, but it keeps a high balance outstanding for longer. Always compare total interest, not just the monthly payment, when choosing a term."
+        ],
+        "table": {
+          "title": "Same $400,000 Loan at 6.5%, by Term (Principal and Interest Only)",
+          "headers": ["Term", "Monthly Payment", "Total Paid", "Total Interest"],
+          "rows": [
+            ["15 years", "$3,484", "$627,197", "$227,197"],
+            ["20 years", "$2,982", "$715,750", "$315,750"],
+            ["30 years", "$2,528", "$910,178", "$510,178"]
+          ]
+        },
+        "callout": { "type": "warning", "title": "Monthly payment is not the full housing cost", "text": "This guide calculates principal and interest only. Property taxes, home insurance, private mortgage insurance and homeowner association fees, where applicable, are usually paid separately or added to the monthly bill and are not in the $2,528 figure." },
+        "pitfalls": [
+          { "mistake": "Choosing a loan on the monthly payment alone", "fix": "Compare total interest over the full term as well as the monthly payment." },
+          { "mistake": "Assuming early payments reduce the balance quickly", "fix": "Check the amortization schedule: early payments are mostly interest, especially on long terms." },
+          { "mistake": "Ignoring rate type", "fix": "A variable rate can change the payment later, while the formula above assumes a fixed rate for the whole term." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate a mortgage monthly payment?", "answer": "Use M = P x [r(1 + r)^n] / [(1 + r)^n - 1], where r is the annual rate divided by 12 and n is years multiplied by 12. For $400,000 at 6.5% for 30 years, the payment is $2,528 per month for principal and interest." },
+      { "question": "Why is total interest so high on a 30-year mortgage?", "answer": "Because the balance stays high for many years, interest keeps being charged on a large amount. On a $400,000 loan at 6.5% for 30 years, total interest is $510,178, more than the amount borrowed." },
+      { "question": "Does paying extra principal help?", "answer": "Yes. Extra principal directly reduces the outstanding balance, so future interest is charged on a smaller amount. Even regular small extra payments can reduce total interest and shorten the loan, but check for any prepayment terms first." }
+    ]
+  },
 };

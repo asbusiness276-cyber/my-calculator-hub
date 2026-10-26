@@ -1682,4 +1682,158 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "Which is better for saving, APR or APY?", "answer": "Compare APY to APY. For the same nominal rate, more frequent compounding gives a higher APY, so a higher APY means a higher effective return, before fees." }
     ]
   },
+  "hecs-help-debt-explained": {
+    "slug": "hecs-help-debt-explained",
+    "leadParagraph": "HECS-HELP is an Australian Government loan that lets eligible students pay for higher education fees later, through the tax system, instead of upfront. The debt is indexed each year, which means it grows with inflation, but it does not carry a commercial interest rate, and repayments only start once income reaches a threshold that changes over time.",
+    "keyTakeaways": [
+      "HECS-HELP debt is indexed annually, not charged commercial interest: New debt = Old debt x (1 + indexation rate).",
+      "Repayments are collected through the tax system once income reaches the repayment threshold, and the repayment rate rises with income.",
+      "Indexation rates and repayment thresholds change from year to year, so always check the current official figures before relying on a number in any example.",
+      "Extra voluntary repayments reduce the balance that future indexation is applied to, which can reduce the total amount repaid over time."
+    ],
+    "sections": [
+      {
+        "id": "hecs-indexation-formula",
+        "heading": "1. How Indexation Works",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Indexation adjusts a HECS-HELP debt for inflation, usually once a year. It is not the same as interest on a bank loan: the rate is set by an inflation measure, and it applies to the outstanding balance. If the indexation rate is higher, the balance grows faster even if no new study fees are added. This guide uses example rates only, to show the maths, because the actual rate for a given year must be checked from official sources."
+        ],
+        "formulaBox": {
+          "title": "HECS-HELP Indexation Formula",
+          "formula": "New Debt = Old Debt x (1 + Indexation Rate)",
+          "variables": [
+            { "symbol": "Old Debt", "meaning": "Outstanding HECS-HELP balance before indexation" },
+            { "symbol": "Indexation Rate", "meaning": "Annual indexation rate for that year, as a decimal (example only in this guide)" },
+            { "symbol": "New Debt", "meaning": "Balance after indexation is applied" }
+          ]
+        }
+      },
+      {
+        "id": "hecs-worked-example",
+        "heading": "2. Worked Example: $40,000 Debt at an Example 4.0% Indexation Rate",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take an outstanding HECS-HELP debt of $40,000, with an example indexation rate of 4.0% for one year. This rate is an example only to show the calculation, not a claim about the current official rate for any year."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$40,000 Debt, 4.0% Example Indexation, One Year",
+          "scenarioText": "Outstanding debt $40,000 | Example indexation rate 4.0% | One year | No new fees or repayments in this example.",
+          "steps": [
+            { "stepTitle": "Step 1: Indexation amount", "math": "$40,000 x 0.04 = $1,600", "explanation": "Indexation adds $1,600 to the balance for that year at the example rate." },
+            { "stepTitle": "Step 2: New balance", "math": "$40,000 + $1,600 = $41,600", "explanation": "The new balance is $41,600, which is the amount future indexation and repayments will be based on." },
+            { "stepTitle": "Step 3: Why voluntary repayments matter", "math": "If $5,000 is repaid before indexation, balance is $35,000; indexation is $35,000 x 0.04 = $1,400, not $1,600", "explanation": "Repaying before indexation reduces the balance that indexation is applied to, saving $200 in this example." }
+          ],
+          "finalResult": "Example result: $40,000 at 4.0% example indexation becomes $41,600 after one year. The actual rate for a given year must be checked from official sources, as it changes annually."
+        },
+        "table": {
+          "title": "Indexation on Different Balances at the 4.0% Example Rate",
+          "headers": ["Starting Debt", "Indexation at 4.0%", "New Balance"],
+          "rows": [
+            ["$10,000", "$400", "$10,400"],
+            ["$20,000", "$800", "$20,800"],
+            ["$30,000", "$1,200", "$31,200"],
+            ["$40,000", "$1,600", "$41,600"]
+          ]
+        }
+      },
+      {
+        "id": "hecs-repayments",
+        "heading": "3. How Repayments Work, and Mistakes to Avoid",
+        "badge": "Repayments",
+        "paragraphs": [
+          "Repayments are not a fixed monthly bill like a bank loan. They are collected through the tax system, based on repayment income, once that income reaches the threshold for the year. The repayment rate increases in steps as income rises, so higher income means a higher percentage is collected, up to a maximum rate. Because thresholds and rates change, the exact repayment for a given income in a given year must be checked from official sources, not from an old table.",
+          "A common misunderstanding is that HECS-HELP works like a credit card or personal loan with a fixed interest rate and a due date. It does not: there is no commercial interest rate, no fixed monthly payment, and the debt is not collected by a bank. What grows the balance is indexation, and what reduces it is repayments through tax, voluntary repayments, or both."
+        ],
+        "callout": { "type": "warning", "title": "Example rates are not official rates", "text": "The 4.0% rate in this guide is an example only, used to show the maths. Indexation rates and repayment thresholds change each year, so check the current official figures before making a decision based on them." },
+        "pitfalls": [
+          { "mistake": "Treating indexation as bank interest", "fix": "Indexation adjusts for inflation on the outstanding balance; it is not a commercial interest rate with a fixed monthly charge." },
+          { "mistake": "Using an old threshold or rate", "fix": "Check the current year's official threshold and indexation rate, because both change annually." },
+          { "mistake": "Ignoring the timing of voluntary repayments", "fix": "A voluntary repayment before indexation is applied reduces the balance that indexation is charged on." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How is HECS-HELP debt indexed?", "answer": "Each year, the outstanding balance is multiplied by (1 + indexation rate). For example, $40,000 at a 4.0% example rate becomes $41,600. The actual rate changes each year and must be checked from official sources." },
+      { "question": "When do HECS-HELP repayments start?", "answer": "Repayments are collected through the tax system once repayment income reaches the threshold for that year, and the rate rises with income. Thresholds and rates change annually." },
+      { "question": "Does paying extra reduce HECS-HELP debt faster?", "answer": "Yes. A voluntary repayment reduces the outstanding balance, so future indexation is applied to a smaller amount, which can reduce the total repaid over time." }
+    ]
+  },
+  "credit-card-payoff-strategies": {
+    "slug": "credit-card-payoff-strategies",
+    "leadParagraph": "Paying off credit card debt is a choice between two strategies: snowball and avalanche. Snowball pays the smallest balance first for quick wins, while avalanche pays the highest interest rate first to save the most interest. Neither strategy works unless the monthly payment is higher than the interest added each month, because otherwise the balance grows instead of shrinking.",
+    "keyTakeaways": [
+      "Snowball: pay the smallest balance first, then roll that payment into the next smallest balance. It gives quick wins that help people stay on track.",
+      "Avalanche: pay the highest APR first, then the next highest. It usually saves the most interest over time, because expensive debt is cleared first.",
+      "Monthly interest = Balance x (APR / 12). If the monthly payment is less than this, the balance will grow even while paying.",
+      "Paying more than the minimum, even a little more, can cut both the payoff time and the total interest by a large amount."
+    ],
+    "sections": [
+      {
+        "id": "credit-card-formula",
+        "heading": "1. How Credit Card Interest Is Calculated Each Month",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Credit card interest is usually charged monthly on the outstanding balance, using the annual percentage rate (APR) divided by 12. That monthly interest is added to the balance, and the next month's interest is charged on the new balance, which is why minimum-only payments take so long to clear a debt."
+        ],
+        "formulaBox": {
+          "title": "Monthly Credit Card Interest Formula",
+          "formula": "Monthly Interest = Balance x (APR / 12)",
+          "variables": [
+            { "symbol": "Balance", "meaning": "Outstanding credit card balance at the start of the month" },
+            { "symbol": "APR", "meaning": "Annual percentage rate, as a decimal" },
+            { "symbol": "Monthly Interest", "meaning": "Interest added that month, before any payment is applied" }
+          ]
+        }
+      },
+      {
+        "id": "credit-card-worked-example",
+        "heading": "2. Worked Example: $5,000 at 20% APR",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a single credit card balance of $5,000 at 20% APR, with a fixed monthly payment and no new spending on the card. This isolates the effect of the payment size, without mixing in other cards or fees."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$5,000 Balance, 20% APR, Fixed Monthly Payments, No New Spending",
+          "scenarioText": "Balance $5,000 | APR 20% | Monthly rate 20% / 12 = 1.6667% | No new charges or fees in this example.",
+          "steps": [
+            { "stepTitle": "Step 1: First month interest", "math": "$5,000 x (0.20 / 12) = $83.33 interest in month 1", "explanation": "Interest alone is $83.33 in the first month, before any payment." },
+            { "stepTitle": "Step 2: First month with a $200 payment", "math": "Principal paid = $200 - $83.33 = $116.67; New balance = $5,000 - $116.67 = $4,883.33", "explanation": "More than half the $200 payment goes to principal in month 1, but the share falls if the balance stays high." },
+            { "stepTitle": "Step 3: Total payoff at $200 per month", "math": "About 33 months, total paid about $6,522, total interest about $1,522", "explanation": "Calculated with a fixed $200 payment each month until the balance reaches zero, with no new spending." },
+            { "stepTitle": "Step 4: Total payoff at $300 per month", "math": "About 20 months, total paid about $5,906, total interest about $906", "explanation": "Paying $100 more per month saves about $616 in interest and about 13 months of payments in this example." }
+          ],
+          "finalResult": "At $200 per month: about 33 months and $1,522 interest. At $300 per month: about 20 months and $906 interest. The extra $100 per month saves about $616 and 13 months."
+        },
+        "table": {
+          "title": "Payoff Comparison: $5,000 at 20% APR, No New Spending",
+          "headers": ["Monthly Payment", "Payoff Time", "Total Paid", "Total Interest"],
+          "rows": [
+            ["$200", "About 33 months", "About $6,522", "About $1,522"],
+            ["$300", "About 20 months", "About $5,906", "About $906"]
+          ]
+        }
+      },
+      {
+        "id": "credit-card-snowball-avalanche",
+        "heading": "3. Snowball vs Avalanche: Which One to Choose",
+        "badge": "Comparison",
+        "paragraphs": [
+          "With snowball, list debts from smallest balance to largest, pay minimums on all of them, and put every extra dollar toward the smallest balance. When that card is cleared, roll its payment into the next smallest card. The advantage is psychological: clearing a card quickly gives a visible win, which helps many people keep going.",
+          "With avalanche, list debts from highest APR to lowest, pay minimums on all of them, and put every extra dollar toward the highest APR card first. The advantage is mathematical: expensive debt is cleared first, so less interest accumulates overall. In practice, avalanche usually saves more interest, but snowball usually feels easier to stick with, and the best strategy is the one that will actually be followed to the end.",
+          "Whichever strategy is chosen, stop adding new spending to the cards being paid off, if possible, because new charges undo the progress of the extra payments. Also check for fees, penalty rates and promotional rates that end, because those change the effective APR used in the calculation."
+        ],
+        "callout": { "type": "warning", "title": "Minimum payments alone take a very long time", "text": "A payment that only just covers monthly interest barely reduces the balance. Paying more than the minimum, and stopping new spending, is what actually shortens the payoff." },
+        "pitfalls": [
+          { "mistake": "Paying only the minimum and expecting quick progress", "fix": "Pay a fixed amount above the minimum each month, and calculate the payoff time for that amount." },
+          { "mistake": "Choosing avalanche but quitting early", "fix": "If quick wins are needed to stay on track, snowball may be better in practice, even if avalanche saves more interest on paper." },
+          { "mistake": "Adding new spending while paying off", "fix": "New charges increase the balance and the interest, and can cancel out extra payments." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "What is the difference between snowball and avalanche?", "answer": "Snowball pays the smallest balance first for quick wins. Avalanche pays the highest APR first to save the most interest. Avalanche usually saves more interest, snowball usually feels easier to stick with." },
+      { "question": "How long does it take to pay off $5,000 at 20% APR?", "answer": "At $200 per month with no new spending, about 33 months with about $1,522 interest. At $300 per month, about 20 months with about $906 interest." },
+      { "question": "Why does paying more than the minimum help so much?", "answer": "Because monthly interest is charged on the balance, a larger payment reduces the balance faster, so future interest is charged on a smaller amount, which shortens the payoff and reduces total interest." }
+    ]
+  },
 };

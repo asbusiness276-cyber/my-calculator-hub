@@ -1369,7 +1369,7 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "How do I remove GST from a price that already includes it?", "answer": "Divide the inclusive price by (1 + rate). For Rs 11,800 inclusive of 18% GST, the base price is Rs 11,800 / 1.18 = Rs 10,000, so GST is Rs 1,800." },
       { "question": "What is the difference between CGST, SGST and IGST?", "answer": "CGST and SGST are the equal halves of GST on intra-state sales, going to the central and state governments. IGST is the full GST on inter-state sales, collected centrally and shared." }
     ]
-  }
+  },
   "mortgage-repayment-guide": {
     "slug": "mortgage-repayment-guide",
     "leadParagraph": "A mortgage repayment is a fixed monthly payment that covers both interest and principal over the life of the loan. Early payments are mostly interest, and only slowly shift toward principal, which is why the total interest on a long mortgage can exceed the amount originally borrowed.",

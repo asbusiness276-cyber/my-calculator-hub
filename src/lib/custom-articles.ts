@@ -1448,4 +1448,81 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "Does paying extra principal help?", "answer": "Yes. Extra principal directly reduces the outstanding balance, so future interest is charged on a smaller amount. Even regular small extra payments can reduce total interest and shorten the loan, but check for any prepayment terms first." }
     ]
   },
+  "how-much-emergency-fund": {
+    "slug": "how-much-emergency-fund",
+    "leadParagraph": "An emergency fund is cash set aside for unexpected expenses, such as a job loss, a medical bill or a major home repair, so that you do not have to borrow at high interest or sell investments at a bad time. The common rule is 3 to 6 months of essential expenses, but the right number depends on how stable your income is and how many people depend on it.",
+    "keyTakeaways": [
+      "Start with essential monthly expenses, not total income: housing, food, utilities, transport, insurance and minimum debt payments.",
+      "The standard target is 3 months of essential expenses for stable dual incomes, and 6 months or more for a single income, freelance income or a single-earner household.",
+      "Build it in a separate, easily accessible account, not in investments that can fall in value or take days to sell.",
+      "A starter fund of $1,000 is better than no fund at all, but it is a first step, not the full target for most households."
+    ],
+    "sections": [
+      {
+        "id": "emergency-fund-formula",
+        "heading": "1. How to Calculate Your Emergency Fund Target",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "List only expenses you must pay even in a crisis, then multiply by the number of months that fits your situation. Discretionary spending, such as eating out, subscriptions you can cancel and holidays, is not counted in the essential total, which keeps the target realistic instead of inflated."
+        ],
+        "formulaBox": {
+          "title": "Emergency Fund Target Formula",
+          "formula": "Target = Essential Monthly Expenses x Months of Cover",
+          "variables": [
+            { "symbol": "Essential Monthly Expenses", "meaning": "Housing, food, utilities, transport, insurance and minimum debt payments" },
+            { "symbol": "Months of Cover", "meaning": "3 for stable income, 6 or more for single, freelance or variable income" },
+            { "symbol": "Target", "meaning": "Cash to hold in an accessible account for emergencies" }
+          ]
+        }
+      },
+      {
+        "id": "emergency-fund-worked-example",
+        "heading": "2. Worked Example: $5,000 of Essential Expenses per Month",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a household whose essential monthly expenses total $5,000, made up of housing, food, utilities, transport, insurance and minimum debt payments."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$5,000 Essential Expenses, 3 Months and 6 Months of Cover",
+          "scenarioText": "Essential monthly expenses $5,000 | Cover options 3 months and 6 months | Cash in an accessible account.",
+          "steps": [
+            { "stepTitle": "Step 1: 3-month target", "math": "$5,000 x 3 = $15,000", "explanation": "This fits a household with two stable incomes and no dependents relying on a single job." },
+            { "stepTitle": "Step 2: 6-month target", "math": "$5,000 x 6 = $30,000", "explanation": "This fits a single income, freelance or variable income, or a household where one job supports everyone." },
+            { "stepTitle": "Step 3: Build it in stages", "math": "$1,000 starter, then $15,000, then $30,000", "explanation": "Save a $1,000 starter fund first, then build to the 3-month target, then to the 6-month target if that fits your situation." }
+          ],
+          "finalResult": "For $5,000 of essential expenses: 3-month target $15,000, 6-month target $30,000. The right target is the one that matches your income stability, not the largest number in this guide."
+        },
+        "table": {
+          "title": "Emergency Fund Targets by Essential Monthly Expenses",
+          "headers": ["Essential Expenses / Month", "3-Month Target", "6-Month Target"],
+          "rows": [
+            ["$2,000", "$6,000", "$12,000"],
+            ["$3,500", "$10,500", "$21,000"],
+            ["$5,000", "$15,000", "$30,000"],
+            ["$7,500", "$22,500", "$45,000"]
+          ]
+        }
+      },
+      {
+        "id": "emergency-fund-where-and-pitfalls",
+        "heading": "3. Where to Keep It, and Mistakes to Avoid",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "Keep the fund in a separate savings account that you can access within a day or two, but that you do not use for everyday spending. That separation is what stops it from being spent on non-emergencies. Do not keep it in stocks or other investments that can fall in value exactly when you need the money, and do not keep it in a fixed deposit you cannot break without a penalty if that would delay access in a real emergency.",
+          "Replenish the fund after you use it, and recalculate it when your essential expenses change, for example after moving house, having a child or changing jobs. An emergency fund is not a one-time calculation."
+        ],
+        "callout": { "type": "warning", "title": "An emergency fund is not an investment", "text": "Its job is availability and stability, not high returns. A low return on emergency cash is acceptable because the fund exists to prevent borrowing at high interest in a crisis." },
+        "pitfalls": [
+          { "mistake": "Counting total income instead of essential expenses", "fix": "Use essential expenses only, so the target is based on what you must pay, not what you earn." },
+          { "mistake": "Investing the emergency fund in stocks", "fix": "Keep it in accessible cash, because investments can fall when you most need the money." },
+          { "mistake": "Stopping at the starter fund", "fix": "Treat $1,000 as a first step, then build to 3 months, then to 6 months if your income situation requires it." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How much emergency fund do I need?", "answer": "Multiply your essential monthly expenses by 3 to 6. For $5,000 of essential expenses, that is $15,000 for 3 months or $30,000 for 6 months. Use 6 months or more if you have a single or variable income." },
+      { "question": "Is $1,000 enough for an emergency fund?", "answer": "It is a useful starter fund, but for most households it is not the full target. It covers a small unexpected bill, not several months without income." },
+      { "question": "Where should I keep my emergency fund?", "answer": "In a separate, easily accessible savings account, not in investments that can fall in value or in everyday spending money." }
+    ]
+  },
 };

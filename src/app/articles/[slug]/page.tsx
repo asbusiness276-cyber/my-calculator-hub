@@ -78,6 +78,8 @@ export default async function ArticlePage({ params }: Props) {
     "how-to-calculate-gst": ["gst-calculator", "tax-calculator", "sales-tax-calculator"],
     "mortgage-repayment-guide": ["mortgage-calculator", "loan-calculator", "emi-calculator"],
     "how-much-emergency-fund": ["emergency-fund-calculator", "savings-goal-calculator", "budget-calculator"],
+    "salary-to-hourly-rate-guide": ["salary-calculator", "hourly-to-salary-calculator", "salary-to-hourly-calculator"],
+    "apr-vs-apy-explained": ["apy-calculator", "apr-calculator", "compound-interest-calculator"],
   };
   const terms = article.title.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
   let relatedCalculators = relatedOverrides[slug]

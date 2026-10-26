@@ -6,8 +6,8 @@ import { Metadata } from "next";
 import { articles, articleCategories } from "@/lib/articles";
 
 export const metadata: Metadata = {
-  title: "Articles & Expert Guides - MyCalculatorHub",
-  description: "Explore 100+ in-depth calculation guides, formulas, and tutorials across university grading, finance, health, and daily mathematics. Master complex calculations easily.",
+  title: "Articles & Expert Guides",
+  description: "Explore in-depth calculation guides, formulas, and tutorials across university grading, finance, health, and daily mathematics. Master complex calculations easily.",
   alternates: {
     canonical: "/articles",
   },

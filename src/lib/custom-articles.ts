@@ -1836,4 +1836,236 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "Why does paying more than the minimum help so much?", "answer": "Because monthly interest is charged on the balance, a larger payment reduces the balance faster, so future interest is charged on a smaller amount, which shortens the payoff and reduces total interest." }
     ]
   },
+  "saving-for-a-house-deposit": {
+    "slug": "saving-for-a-house-deposit",
+    "leadParagraph": "A house deposit is the upfront amount you pay toward a home's purchase price, with the rest usually borrowed as a mortgage. The size of the deposit is normally set as a percentage of the price, so the first step is not a guess about a monthly saving amount, it is a target amount: price multiplied by deposit percentage, plus a separate allowance for closing costs.",
+    "keyTakeaways": [
+      "Deposit target = Home Price x Deposit Percentage. For a $500,000 home, a 20% deposit is $100,000.",
+      "Months to save = Deposit Target / Monthly Saving. At $2,000 a month, a $100,000 deposit takes 50 months.",
+      "A smaller deposit gets you there sooner, but it usually means a larger loan, and in some markets extra insurance or costs, so check the local rules before choosing a percentage.",
+      "Keep closing costs separate from the deposit: they are extra, not part of the deposit percentage, and they vary by market and purchase."
+    ],
+    "sections": [
+      {
+        "id": "house-deposit-formula",
+        "heading": "1. How to Calculate Your Deposit Target",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Start with the price of the kind of home you are actually aiming for, not a round number from an article. Multiply that price by the deposit percentage you plan to pay. That gives the deposit itself. Then add a separate estimate for closing costs, such as fees, taxes and moving costs where they apply, because those are paid on top of the deposit and are not included in the percentage."
+        ],
+        "formulaBox": {
+          "title": "House Deposit Target Formula",
+          "formula": "Deposit Target = Home Price x Deposit Percentage",
+          "variables": [
+            { "symbol": "Home Price", "meaning": "Price of the home you plan to buy" },
+            { "symbol": "Deposit Percentage", "meaning": "Share of the price paid upfront, as a decimal (for example 0.20 for 20%)" },
+            { "symbol": "Deposit Target", "meaning": "Upfront amount before closing costs" }
+          ]
+        }
+      },
+      {
+        "id": "house-deposit-worked-example",
+        "heading": "2. Worked Example: $500,000 Home, 20% Deposit, $2,000 a Month",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a home priced at $500,000, with a planned deposit of 20% and monthly savings of $2,000, ignoring any interest earned on the savings so the timeline is conservative."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$500,000 Home, 20% Deposit, $2,000 Saved per Month",
+          "scenarioText": "Home price $500,000 | Deposit percentage 20% | Monthly saving $2,000 | No interest on savings in this example.",
+          "steps": [
+            { "stepTitle": "Step 1: Deposit target", "math": "$500,000 x 0.20 = $100,000", "explanation": "A 20% deposit on a $500,000 home is $100,000, before closing costs." },
+            { "stepTitle": "Step 2: Months to reach it", "math": "$100,000 / $2,000 = 50 months", "explanation": "50 months is 4 years and 2 months of saving at $2,000 a month." },
+            { "stepTitle": "Step 3: What changes the timeline", "math": "At $1,500 a month: $100,000 / $1,500 = 66.67 months, so 67 months; at $2,500 a month: $100,000 / $2,500 = 40 months", "explanation": "Adding $500 a month cuts 17 months off the $2,000-a-month timeline; saving $500 less adds 17 months." },
+            { "stepTitle": "Step 4: Set the monthly amount from a deadline", "math": "For a 5-year goal: $100,000 / 60 months = $1,667 a month (rounded up)", "explanation": "Working backwards from a deadline gives the saving amount to aim for, instead of guessing." }
+          ],
+          "finalResult": "For a $500,000 home at 20%: deposit $100,000. At $2,000 a month that takes 50 months (4 years 2 months), before closing costs and before any interest earned on savings."
+        },
+        "table": {
+          "title": "Deposit Targets by Home Price at 20%",
+          "headers": ["Home Price", "10% Deposit", "20% Deposit"],
+          "rows": [
+            ["$400,000", "$40,000", "$80,000"],
+            ["$500,000", "$50,000", "$100,000"],
+            ["$600,000", "$60,000", "$120,000"]
+          ]
+        }
+      },
+      {
+        "id": "house-deposit-pitfalls",
+        "heading": "3. Smaller Deposits, Closing Costs, and Mistakes to Avoid",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "A 10% deposit on a $500,000 home is $50,000, half the 20% target, so it is reached in half the time at the same monthly saving. The trade-off is a larger mortgage, which means larger monthly repayments and more total interest over the life of the loan. In some markets a smaller deposit also brings extra insurance or lender costs, so check the local rules for the market you are buying in before treating a low deposit as free.",
+          "Keep the deposit in a separate, accessible savings account, and keep closing costs as a separate line in the same plan. If savings earn interest, the timeline will be slightly shorter than the no-interest figures in this guide, which is why those figures are conservative rather than optimistic."
+        ],
+        "callout": { "type": "warning", "title": "The deposit is not the total upfront cost", "text": "Closing costs, fees and moving costs are paid in addition to the deposit and vary by market. A plan that only covers the deposit percentage will be short on the day of purchase." },
+        "pitfalls": [
+          { "mistake": "Saving a guessed monthly amount with no target", "fix": "Calculate price x deposit percentage first, then divide by monthly saving or by months to the deadline." },
+          { "mistake": "Forgetting closing costs", "fix": "Add a separate closing-cost estimate to the deposit target, instead of assuming the deposit percentage covers everything." },
+          { "mistake": "Choosing the smallest deposit without checking the loan cost", "fix": "Compare the larger loan and its monthly repayment and total interest, and check for any extra costs that apply to smaller deposits in your market." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate a house deposit?", "answer": "Multiply the home price by the deposit percentage. For a $500,000 home at 20%, that is $500,000 x 0.20 = $100,000, before closing costs." },
+      { "question": "How long does it take to save a $100,000 deposit?", "answer": "Divide the target by monthly saving. At $2,000 a month it takes 50 months (4 years 2 months); at $1,500 a month it takes 67 months; at $2,500 a month it takes 40 months, ignoring interest on savings." },
+      { "question": "Is a 10% deposit better than 20%?", "answer": "It is reached sooner, $50,000 instead of $100,000 on a $500,000 home, but it leaves a larger loan with larger repayments and more total interest, and it can bring extra costs in some markets, so compare the full loan cost, not just the saving time." }
+    ]
+  },
+  "how-inflation-affects-savings": {
+    "slug": "how-inflation-affects-savings",
+    "leadParagraph": "Inflation is the rise in the general price level over time, which means the same amount of money buys less in the future than it does today. A savings plan that only counts the nominal balance therefore overstates progress: the question that matters is not how many dollars or rupees are in the account, but what those savings will actually buy when they are spent.",
+    "keyTakeaways": [
+      "Purchasing Power = Amount / (1 + Inflation Rate)^Years. $10,000 today is worth about $7,441 in today's buying power after 10 years at 3% inflation.",
+      "Future Price = Current Price x (1 + Inflation Rate)^Years. A $100 item today costs about $134.39 after 10 years at 3% inflation.",
+      "A savings rate below inflation still grows the balance but shrinks its buying power: $10,000 at 2% for 10 years becomes $12,190 nominally, but only about $9,070 in today's money at 3% inflation.",
+      "The exact real return is (1 + Nominal Rate) / (1 + Inflation Rate) - 1, not simply nominal minus inflation, though the subtraction is a close approximation for small rates."
+    ],
+    "sections": [
+      {
+        "id": "inflation-formula",
+        "heading": "1. How to Calculate What Savings Will Actually Buy",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Start with the amount you have today and the inflation rate you want to test — use it as an assumption, not a prediction. To find what today's money will buy in the future, divide by (1 + inflation rate) raised to the number of years. To find what a current price will become, multiply by the same factor instead. Both directions use the same compounding idea as interest, only applied to prices rather than to a bank balance."
+        ],
+        "formulaBox": {
+          "title": "Inflation Formulas",
+          "formula": "Purchasing Power = Amount / (1 + i)^n  |  Future Price = Current Price x (1 + i)^n",
+          "variables": [
+            { "symbol": "i", "meaning": "Annual inflation rate as a decimal (for example 0.03 for 3%)" },
+            { "symbol": "n", "meaning": "Number of years" },
+            { "symbol": "Amount / Current Price", "meaning": "Value in today's money / today's price" }
+          ]
+        }
+      },
+      {
+        "id": "inflation-worked-example",
+        "heading": "2. Worked Example: $10,000 Today, 3% Inflation, 10 Years",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take $10,000 held today, with inflation at an assumed 3% a year for 10 years, and no spending or interest in the first step so the inflation effect is isolated."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$10,000 Today at 3% Inflation for 10 Years",
+          "scenarioText": "Amount $10,000 | Inflation 3% a year | Period 10 years | Rates are examples only.",
+          "steps": [
+            { "stepTitle": "Step 1: Purchasing power", "math": "$10,000 / (1.03)^10 = $10,000 / 1.3439 = $7,441", "explanation": "After 10 years at 3%, $10,000 buys what about $7,441 buys today — a loss of about $2,559 in buying power." },
+            { "stepTitle": "Step 2: Future price of a $100 item", "math": "$100 x (1.03)^10 = $100 x 1.3439 = $134.39", "explanation": "The same basket that costs $100 today costs about $134.39 after 10 years at 3% inflation." },
+            { "stepTitle": "Step 3: Savings at 2% vs 3% inflation", "math": "$10,000 x (1.02)^10 = $12,190 nominal; $12,190 / 1.3439 = $9,070 in today's money", "explanation": "The balance grew by $2,190, but its buying power fell by about $930 because inflation outpaced the savings rate." },
+            { "stepTitle": "Step 4: Savings at 4% vs 3% inflation", "math": "Exact real return = 1.04 / 1.03 - 1 = 0.97% a year; $10,000 x (1.04)^10 = $14,802 nominal, about $11,014 in today's money", "explanation": "Only when the nominal rate beats inflation does buying power actually grow; the simple 4% - 3% = 1% approximation is close to the exact 0.97%." }
+          ],
+          "finalResult": "At 3% inflation for 10 years, $10,000 today has about $7,441 of today's buying power. A savings rate must beat inflation, not just stay positive, to preserve buying power."
+        },
+        "table": {
+          "title": "What $10,000 Today Buys After Inflation",
+          "headers": ["Inflation Rate", "After 10 Years", "After 20 Years"],
+          "rows": [
+            ["2%", "$8,203", "$6,730"],
+            ["3%", "$7,441", "$5,537"],
+            ["5%", "$6,139", "$3,769"]
+          ]
+        }
+      },
+      {
+        "id": "inflation-pitfalls",
+        "heading": "3. What Inflation Means for a Savings Target, and Mistakes to Avoid",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "A fixed savings target set today will buy less by the time it is reached. If a goal is 10 years away and inflation averages 3%, a $10,000 target in today's terms needs about $13,439 in future money just to buy the same things — so either save to the inflated figure, or check the target in today's money each year and top it up. The same logic applies to a house deposit target: the deposit percentage applies to the future price, not today's price.",
+          "Do not treat a single inflation rate as a forecast. Inflation varies year to year and by country and by what is being bought, so test a range (for example 2%, 3% and 5% as in the table above) rather than planning on one number."
+        ],
+        "callout": { "type": "warning", "title": "Nominal growth is not real growth", "text": "A balance that rises while inflation rises faster is falling in buying power. Compare the savings rate with inflation before calling a plan on track." },
+        "pitfalls": [
+          { "mistake": "Saving to a fixed nominal target with no inflation check", "fix": "Restate the target in future prices with (1 + i)^n, or review it in today's money each year." },
+          { "mistake": "Calling any positive interest rate a win", "fix": "Subtract inflation, or use the exact real-return formula, before judging the return." },
+          { "mistake": "Planning on one inflation rate as if it were certain", "fix": "Test 2%, 3% and 5% and keep the plan workable across that range." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate the effect of inflation on my savings?", "answer": "Divide the amount by (1 + inflation rate)^years. At 3% for 10 years, $10,000 / 1.3439 = about $7,441 in today's buying power." },
+      { "question": "What will $100 cost in 10 years at 3% inflation?", "answer": "$100 x (1.03)^10 = about $134.39." },
+      { "question": "If my savings earn 2% but inflation is 3%, am I still gaining?", "answer": "No, in buying-power terms. $10,000 becomes $12,190 nominally in 10 years, but that is only about $9,070 in today's money." }
+    ]
+  },
+  "debt-to-income-ratio-guide": {
+    "slug": "debt-to-income-ratio-guide",
+    "leadParagraph": "Your debt-to-income (DTI) ratio is the share of your gross monthly income that goes to required debt payments. Lenders use it as a quick check on whether you can take on another loan without being stretched too thin, which is why it matters before a mortgage, car loan or personal loan application — and why lowering it is one of the few levers you control before you apply.",
+    "keyTakeaways": [
+      "DTI = Total Monthly Debt Payments / Gross Monthly Income x 100. Front-end DTI counts housing only; back-end DTI counts housing plus all other debts.",
+      "Worked example: $6,000 gross income, $1,500 housing and $700 other debts gives front-end 25.0% and back-end 36.7%.",
+      "36% or lower back-end DTI is a common comfort guideline; around 43% is a frequent ceiling for many mortgage programmes, above which approval gets harder — these are guidelines, not universal rules.",
+      "Only required debt payments count: minimum card payments, loan instalments, rent/mortgage and court-ordered payments. Groceries, utilities and subscriptions are not debts for DTI, even though they affect your real budget."
+    ],
+    "sections": [
+      {
+        "id": "dti-formula",
+        "heading": "1. How to Calculate Front-End and Back-End DTI",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Start with gross monthly income — pay before tax and deductions, averaged over a few months if it varies. Add up every required monthly debt payment: housing (rent, or mortgage principal, interest, taxes and insurance), car loan, student loan, personal loan, minimum credit card payments and any other instalment or court-ordered payment. Divide housing alone by income for front-end DTI, and total debt by income for back-end DTI, then multiply by 100."
+        ],
+        "formulaBox": {
+          "title": "DTI Formulas",
+          "formula": "Front-End DTI = Housing Payment / Gross Monthly Income x 100  |  Back-End DTI = Total Monthly Debt Payments / Gross Monthly Income x 100",
+          "variables": [
+            { "symbol": "Housing Payment", "meaning": "Rent, or mortgage payment including taxes and insurance where they apply" },
+            { "symbol": "Total Monthly Debt Payments", "meaning": "Housing plus all other required monthly debt payments" },
+            { "symbol": "Gross Monthly Income", "meaning": "Income before tax and deductions, from all reliable sources" }
+          ]
+        }
+      },
+      {
+        "id": "dti-worked-example",
+        "heading": "2. Worked Example: $6,000 Income, $2,200 Total Debt",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a household with $6,000 gross monthly income, a $1,500 housing payment, a $300 car loan, a $250 student loan and $150 in minimum credit card payments."
+        ],
+        "workedExample": {
+          "scenarioTitle": "$6,000 Income, $1,500 Housing, $700 Other Debts",
+          "scenarioText": "Gross income $6,000/mo | Housing $1,500 | Car $300 | Student loan $250 | Card minimum $150 | Thresholds are guidelines only.",
+          "steps": [
+            { "stepTitle": "Step 1: Total monthly debt", "math": "$1,500 + $300 + $250 + $150 = $2,200", "explanation": "Only required payments are added. Everyday spending is left out of DTI, even though it matters for the household budget." },
+            { "stepTitle": "Step 2: Front-end DTI", "math": "$1,500 / $6,000 x 100 = 25.0%", "explanation": "Housing alone takes a quarter of gross income, inside the common 28% front-end guideline." },
+            { "stepTitle": "Step 3: Back-end DTI", "math": "$2,200 / $6,000 x 100 = 36.7%", "explanation": "All debts together take 36.7% of gross income — just above the common 36% comfort guideline, but below the frequent 43% mortgage ceiling." },
+            { "stepTitle": "Step 4: Headroom at the guidelines", "math": "36% cap = $2,160 (already $40 over) | 43% cap = $2,580 (headroom $380)", "explanation": "At this income the household is already $40 a month over a strict 36% target, so a new loan payment would need a debt payoff or higher income to stay under it." }
+          ],
+          "finalResult": "Front-end DTI 25.0%, back-end DTI 36.7%. The housing share is comfortable, but total debt sits just over the 36% guideline — the payoff or income move below is what changes that."
+        },
+        "table": {
+          "title": "What $2,000 of Monthly Debt Means at Different Incomes",
+          "headers": ["Gross Monthly Income", "Back-End DTI on $2,000 Debt", "Reading"],
+          "rows": [
+            ["$4,000", "50.0%", "Above most lender ceilings"],
+            ["$6,000", "33.3%", "Inside the 36% guideline"],
+            ["$8,000", "25.0%", "Comfortable"],
+            ["$10,000", "20.0%", "Strong"]
+          ]
+        }
+      },
+      {
+        "id": "dti-improve",
+        "heading": "3. How to Lower DTI, and Mistakes to Avoid",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "DTI has only two levers: lower the numerator or raise the denominator. Clearing the $300 car loan in the worked example drops total debt to $1,900 and back-end DTI to 31.7% — a bigger improvement than most budgeting tweaks, because the whole payment disappears, not just the interest. Raising gross income works the same way: at $2,200 of debt, income of about $6,111 brings DTI to 36.0%. Paying more than the minimum on a card helps only once the required minimum itself falls, so check whether the lender uses the current minimum or the balance when it calculates DTI.",
+          "Do not confuse DTI with affordability. DTI uses gross income, so the share of take-home pay going to debt is always higher, and it ignores food, transport, childcare and savings. A DTI under 36% can still feel tight if everyday costs are high, and a DTI over 43% does not automatically mean rejection — some programmes allow more with compensating factors such as a large deposit or strong credit history."
+        ],
+        "callout": { "type": "warning", "title": "Gross income flatters the ratio", "text": "DTI divides by pay before tax, so it understates the burden on take-home pay. Run the same division on net pay as a reality check before taking on new debt." },
+        "pitfalls": [
+          { "mistake": "Counting groceries, utilities and subscriptions as debts", "fix": "Include only required debt payments; keep living costs in a separate budget check." },
+          { "mistake": "Using net pay instead of gross pay", "fix": "Lenders normally use gross income for DTI — use gross for the headline figure, net for the personal reality check." },
+          { "mistake": "Treating 36% or 43% as a guaranteed approval line", "fix": "They are common guidelines; the actual limit depends on the lender, loan type and the rest of the application." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate my debt-to-income ratio?", "answer": "Divide total required monthly debt payments by gross monthly income and multiply by 100. For $2,200 of debt on $6,000 income, that is 36.7%." },
+      { "question": "What is a good DTI ratio?", "answer": "36% or lower back-end DTI is a common comfort guideline and around 43% a frequent mortgage ceiling, but lenders vary and these are not guarantees." },
+      { "question": "Does paying off a loan lower my DTI?", "answer": "Yes, by the full monthly payment. Clearing a $300 car loan in the example drops back-end DTI from 36.7% to 31.7%." }
+    ]
+  },
 };

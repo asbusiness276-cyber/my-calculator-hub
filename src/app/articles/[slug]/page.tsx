@@ -85,6 +85,9 @@ export default async function ArticlePage({ params }: Props) {
     "saving-for-a-house-deposit": ["savings-goal-calculator", "mortgage-calculator", "loan-calculator"],
     "how-inflation-affects-savings": ["inflation-calculator", "compound-interest-calculator", "savings-goal-calculator"],
     "debt-to-income-ratio-guide": ["debt-to-income-calculator", "mortgage-calculator", "loan-calculator"],
+    "how-to-calculate-calorie-deficit": ["calorie-deficit-calculator", "tdee-calculator", "bmr-calculator"],
+    "daily-water-intake-guide": ["water-intake-calculator", "bmi-calculator", "calorie-calculator"],
+    "protein-intake-guide": ["protein-intake-calculator", "calorie-deficit-calculator", "bmi-calculator"],
   };
   const terms = article.title.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
   let relatedCalculators = relatedOverrides[slug]

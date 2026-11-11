@@ -2068,4 +2068,236 @@ export const customArticles: Record<string, CustomArticleData> = {
       { "question": "Does paying off a loan lower my DTI?", "answer": "Yes, by the full monthly payment. Clearing a $300 car loan in the example drops back-end DTI from 36.7% to 31.7%." }
     ]
   },
+  "how-to-calculate-calorie-deficit": {
+    "slug": "how-to-calculate-calorie-deficit",
+    "leadParagraph": "A calorie deficit means eating fewer calories than your body uses in a day. The gap is what drives weight loss, so the calculation starts not with a diet number but with your total daily energy expenditure (TDEE), and TDEE starts with basal metabolic rate (BMR) from the Mifflin-St Jeor equation. These figures are estimates for planning, not medical advice, and individual needs vary.",
+    "keyTakeaways": [
+      "Mifflin-St Jeor BMR (men) = 10 x weight(kg) + 6.25 x height(cm) - 5 x age + 5; for women the final term is -161, not +5.",
+      "TDEE = BMR x activity factor (sedentary 1.2, lightly active 1.375, moderately active 1.55, very active 1.725).",
+      "Deficit intake = TDEE - chosen deficit. A 500 kcal/day deficit is about 0.45 kg/week by the 7,700 kcal per kg rule.",
+      "Weight loss slows as weight falls, so TDEE must be recalculated as weight changes."
+    ],
+    "sections": [
+      {
+        "id": "calorie-deficit-formula",
+        "heading": "1. How to Calculate BMR and TDEE",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Start with BMR, the energy your body uses at rest. The Mifflin-St Jeor equation uses weight, height, age and sex, and is the formula most commonly used for this estimate. Then multiply BMR by an activity factor to get TDEE, the total energy used in a day including movement. Using BMR as if it were TDEE is the most common mistake in this calculation, and it leads to under-eating."
+        ],
+        "formulaBox": {
+          "title": "Calorie Deficit Formulas",
+          "formula": "BMR (men) = 10 x weight(kg) + 6.25 x height(cm) - 5 x age + 5  |  TDEE = BMR x activity factor  |  Deficit Intake = TDEE - deficit",
+          "variables": [
+            { "symbol": "BMR", "meaning": "Basal metabolic rate, energy used at rest in kcal/day" },
+            { "symbol": "Activity factor", "meaning": "1.2 sedentary, 1.375 lightly active, 1.55 moderately active, 1.725 very active" },
+            { "symbol": "TDEE", "meaning": "Total daily energy expenditure in kcal/day" }
+          ]
+        }
+      },
+      {
+        "id": "calorie-deficit-worked-example",
+        "heading": "2. Worked Example: 30-Year-Old Man, 80 kg, 175 cm, Moderately Active",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a man, 30 years old, 80 kg, 175 cm tall, moderately active with a factor of 1.55. This is an example to show the calculation, not a prescription for any individual."
+        ],
+        "workedExample": {
+          "scenarioTitle": "Man, 30 Years, 80 kg, 175 cm, Moderately Active (1.55)",
+          "scenarioText": "Weight 80 kg | Height 175 cm | Age 30 | Activity factor 1.55 | Figures are estimates, not medical advice.",
+          "steps": [
+            { "stepTitle": "Step 1: BMR", "math": "10 x 80 + 6.25 x 175 - 5 x 30 + 5 = 800 + 1093.75 - 150 + 5 = 1748.75, about 1,749 kcal/day", "explanation": "BMR is about 1,749 kcal/day at rest." },
+            { "stepTitle": "Step 2: TDEE", "math": "1748.75 x 1.55 = 2710.56, about 2,711 kcal/day", "explanation": "Total daily energy use, including activity, is about 2,711 kcal/day." },
+            { "stepTitle": "Step 3: 500 kcal deficit intake", "math": "2711 - 500 = 2211 kcal/day", "explanation": "Eating about 2,211 kcal/day creates a 500 kcal/day deficit for this person." },
+            { "stepTitle": "Step 4: Expected pace", "math": "500 x 7 = 3500 kcal/week; 3500 / 7700 = about 0.45 kg/week", "explanation": "At about 7,700 kcal per kg of body fat, a 500 kcal/day deficit is about 0.45 kg/week, commonly rounded to about 0.5 kg/week. The 7,700 figure is a rule of thumb, not exact for every person." }
+          ],
+          "finalResult": "BMR about 1,749 kcal/day, TDEE about 2,711 kcal/day, and a 500 kcal/day deficit means about 2,211 kcal/day, at about 0.45 kg/week."
+        },
+        "table": {
+          "title": "Deficit Options for This Person (TDEE 2,711 kcal/day)",
+          "headers": ["Daily Deficit", "Intake", "Expected Pace"],
+          "rows": [
+            ["250 kcal", "2,461 kcal/day", "About 0.23 kg/week"],
+            ["500 kcal", "2,211 kcal/day", "About 0.45 kg/week"],
+            ["750 kcal", "1,961 kcal/day", "About 0.68 kg/week"]
+          ]
+        }
+      },
+      {
+        "id": "calorie-deficit-pitfalls",
+        "heading": "3. Mistakes to Avoid, and When to Get Professional Advice",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "A very large deficit is hard to sustain and can leave too little energy for daily activity, so a moderate deficit that can be followed for weeks is usually more useful than an extreme one for a few days. As weight falls, BMR and TDEE fall too, so the same intake that created a deficit at the start creates a smaller deficit later — recalculate TDEE after a few kilograms of loss.",
+          "Very low intakes, pregnancy, eating disorders, diabetes, heart conditions and other medical situations need professional advice before any deficit is attempted. This guide is a calculation, not a diet prescription."
+        ],
+        "callout": { "type": "warning", "title": "This is a calculation, not medical advice", "text": "These figures are estimates for planning. Individual needs vary by health, activity and other factors, and very low intakes or medical conditions need professional advice." },
+        "pitfalls": [
+          { "mistake": "Using BMR as if it were TDEE", "fix": "Multiply BMR by the activity factor first; BMR alone underestimates daily energy use." },
+          { "mistake": "Picking a very large deficit", "fix": "Choose a moderate deficit that can be sustained for weeks, and recalculate as weight falls." },
+          { "mistake": "Treating 7,700 kcal/kg as exact", "fix": "Treat it as a rule of thumb; real fat loss per calorie varies between people." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How do I calculate my calorie deficit?", "answer": "Calculate TDEE from BMR and activity, then subtract the chosen deficit. For the example in this guide, TDEE is about 2,711 kcal/day, so a 500 kcal deficit means about 2,211 kcal/day." },
+      { "question": "What deficit loses 0.5 kg a week?", "answer": "About 500 kcal/day, which is about 0.45 kg/week by the 7,700 kcal per kg rule of thumb." },
+      { "question": "Why is my loss slower than the maths?", "answer": "TDEE falls as weight falls, and activity and intake estimates are approximate, so recalculate TDEE after a few kilograms of loss." }
+    ]
+  },
+  "daily-water-intake-guide": {
+    "slug": "daily-water-intake-guide",
+    "leadParagraph": "Daily water need is usually estimated from body weight, because a larger body has more tissue to hydrate. The common rule of thumb used here is 35 ml per kilogram of body weight per day, adjusted up for heat, exercise and sweat. This is a planning figure, not medical advice, and people with fluid-restricted conditions should follow their clinician's limit, not this rule.",
+    "keyTakeaways": [
+      "Daily water (ml) = Body weight (kg) x 35. A 70 kg person needs about 2,450 ml, or about 2.5 litres, a day by this rule.",
+      "In 250 ml glasses, 2,450 ml is about 9.8 glasses, so the '8 glasses' rule (2.0 litres) is below the weight-based figure for a 70 kg person.",
+      "Heat and heavy exercise add sweat losses that must be replaced on top of the base figure.",
+      "This rule is a total-fluid planning figure, not a plain-water-only target, and it is not a medical limit."
+    ],
+    "sections": [
+      {
+        "id": "water-intake-formula",
+        "heading": "1. How to Calculate Daily Water Intake by Weight",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Multiply body weight in kilograms by 35 to get millilitres per day, then divide by 1,000 to get litres. A flat 2 litres for every body size is not the same as this weight-based figure: a 50 kg person and a 110 kg person have very different needs by this rule."
+        ],
+        "formulaBox": {
+          "title": "Daily Water Intake Formula",
+          "formula": "Daily Water (ml) = Body Weight (kg) x 35",
+          "variables": [
+            { "symbol": "Body Weight", "meaning": "Body weight in kilograms" },
+            { "symbol": "35", "meaning": "Millilitres per kilogram per day, a common rule of thumb" },
+            { "symbol": "Daily Water", "meaning": "Total fluid planning figure in millilitres per day" }
+          ]
+        }
+      },
+      {
+        "id": "water-intake-worked-example",
+        "heading": "2. Worked Example: 70 kg Person",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take a 70 kg person, using the 35 ml/kg rule with no extra allowance for exercise or heat in the first step, so the base figure is isolated."
+        ],
+        "workedExample": {
+          "scenarioTitle": "70 kg Person, 35 ml/kg Rule",
+          "scenarioText": "Weight 70 kg | Rule 35 ml/kg/day | No exercise or heat allowance in this step.",
+          "steps": [
+            { "stepTitle": "Step 1: Daily water in ml", "math": "70 x 35 = 2450 ml/day", "explanation": "The base figure is 2,450 ml per day." },
+            { "stepTitle": "Step 2: In litres", "math": "2450 / 1000 = 2.45 litres/day, about 2.5 litres", "explanation": "Rounded, that is about 2.5 litres a day." },
+            { "stepTitle": "Step 3: In 250 ml glasses", "math": "2450 / 250 = 9.8 glasses", "explanation": "That is about 10 glasses of 250 ml, not 8." },
+            { "stepTitle": "Step 4: Compare with 8 glasses", "math": "8 x 250 ml = 2000 ml = 2.0 litres", "explanation": "The 8-glass rule is 2.0 litres, which is 450 ml below the 70 kg weight-based figure." }
+          ],
+          "finalResult": "A 70 kg person needs about 2.45 litres a day by the 35 ml/kg rule, about 10 glasses of 250 ml, before any extra for exercise or heat."
+        },
+        "table": {
+          "title": "Daily Water by Body Weight (35 ml/kg Rule)",
+          "headers": ["Body Weight", "Daily Water", "In Litres"],
+          "rows": [
+            ["50 kg", "1,750 ml", "1.75 L"],
+            ["70 kg", "2,450 ml", "2.45 L"],
+            ["90 kg", "3,150 ml", "3.15 L"],
+            ["110 kg", "3,850 ml", "3.85 L"]
+          ]
+        }
+      },
+      {
+        "id": "water-intake-pitfalls",
+        "heading": "3. Exercise, Heat, and Mistakes to Avoid",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "Sweat losses from exercise and heat must be replaced on top of the base figure, so a hot day or a long workout raises the day's need. Thirst and urine colour are practical checks alongside the calculation, but they are not a substitute for it on a day with heavy sweating.",
+          "People with kidney, heart or other fluid-restricted conditions should follow their clinician's limit, not this rule. The rule is a planning figure for a healthy adult, not a medical target."
+        ],
+        "callout": { "type": "warning", "title": "This is a planning figure, not medical advice", "text": "Individual needs vary by health, activity, climate and other factors. People with fluid-restricted conditions should follow their clinician's limit." },
+        "pitfalls": [
+          { "mistake": "Using a flat 2 litres for every body size", "fix": "Calculate by weight: 35 ml per kilogram per day, then adjust for exercise and heat." },
+          { "mistake": "Forgetting exercise and heat", "fix": "Add fluid for heavy sweating on top of the base figure." },
+          { "mistake": "Treating the rule as a medical limit", "fix": "Treat it as a planning figure; follow a clinician's limit where one applies." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How much water for 70 kg?", "answer": "About 2.45 litres a day by the 35 ml/kg rule, before any extra for exercise or heat." },
+      { "question": "Is 8 glasses enough?", "answer": "8 glasses of 250 ml is 2.0 litres, which is below the 70 kg weight-based figure of 2.45 litres." },
+      { "question": "Does exercise change it?", "answer": "Yes — sweat losses from exercise and heat must be replaced on top of the base figure." }
+    ]
+  },
+  "protein-intake-guide": {
+    "slug": "protein-intake-guide",
+    "leadParagraph": "Protein need is normally set per kilogram of body weight, not as one fixed gram amount, because a 60 kg and a 100 kg person do not need the same. The ranges used here are common guidelines: about 0.8 g/kg for a sedentary adult, 1.2-1.6 g/kg for an active adult, and 1.6-2.2 g/kg for someone actively building muscle. These are ranges, not prescriptions, and individual needs vary.",
+    "keyTakeaways": [
+      "Daily protein (g) = Body weight (kg) x grams-per-kg for your goal.",
+      "Common ranges: sedentary about 0.8 g/kg, active 1.2-1.6 g/kg, muscle-building 1.6-2.2 g/kg.",
+      "An 80 kg active adult at 1.6 g/kg needs 128 g/day, or about 32 g across 4 meals.",
+      "100 g of a food is not 100 g of protein — food weight and protein grams are different numbers."
+    ],
+    "sections": [
+      {
+        "id": "protein-intake-formula",
+        "heading": "1. How to Calculate Daily Protein by Body Weight",
+        "badge": "Core Formula",
+        "paragraphs": [
+          "Multiply body weight in kilograms by the grams-per-kg figure for the goal. Use the lower end of a range for a lighter training load and the upper end for a heavier one, and treat the result as a daily total to spread across meals, not a single-meal target."
+        ],
+        "formulaBox": {
+          "title": "Daily Protein Formula",
+          "formula": "Daily Protein (g) = Body Weight (kg) x Grams per kg for Your Goal",
+          "variables": [
+            { "symbol": "Body Weight", "meaning": "Body weight in kilograms" },
+            { "symbol": "Grams per kg", "meaning": "About 0.8 sedentary, 1.2-1.6 active, 1.6-2.2 muscle-building" },
+            { "symbol": "Daily Protein", "meaning": "Total protein in grams per day" }
+          ]
+        }
+      },
+      {
+        "id": "protein-intake-worked-example",
+        "heading": "2. Worked Example: 80 kg Active Adult at 1.6 g/kg",
+        "badge": "Worked Example",
+        "paragraphs": [
+          "Take an 80 kg active adult using 1.6 g/kg, the top of the active range and the bottom of the muscle-building range."
+        ],
+        "workedExample": {
+          "scenarioTitle": "80 kg Active Adult, 1.6 g/kg",
+          "scenarioText": "Weight 80 kg | Rate 1.6 g/kg | Goal active / muscle-building boundary.",
+          "steps": [
+            { "stepTitle": "Step 1: Daily protein", "math": "80 x 1.6 = 128 g/day", "explanation": "The daily total is 128 g of protein." },
+            { "stepTitle": "Step 2: Split across 4 meals", "math": "128 / 4 = 32 g per meal", "explanation": "Spread across 4 meals, that is about 32 g per meal." },
+            { "stepTitle": "Step 3: Compare with sedentary", "math": "80 x 0.8 = 64 g/day", "explanation": "The same person at a sedentary rate needs only 64 g/day, half the active figure." },
+            { "stepTitle": "Step 4: Compare with muscle-building top", "math": "80 x 2.2 = 176 g/day", "explanation": "At the top of the muscle-building range the figure is 176 g/day, but more is not automatically better." }
+          ],
+          "finalResult": "An 80 kg active adult at 1.6 g/kg needs 128 g/day, about 32 g across 4 meals."
+        },
+        "table": {
+          "title": "Daily Protein by Body Weight and Goal (g/day)",
+          "headers": ["Body Weight", "Sedentary 0.8 g/kg", "Active 1.2-1.6 g/kg", "Muscle 1.6-2.2 g/kg"],
+          "rows": [
+            ["60 kg", "48", "72-96", "96-132"],
+            ["80 kg", "64", "96-128", "128-176"],
+            ["100 kg", "80", "120-160", "160-220"]
+          ]
+        }
+      },
+      {
+        "id": "protein-intake-pitfalls",
+        "heading": "3. Mistakes to Avoid When Planning Protein",
+        "badge": "Practical Guide",
+        "paragraphs": [
+          "When body fat is very high, some guidance uses lean mass instead of total body weight, so flag that case rather than silently switching the calculation. Eating all the protein in one meal and assuming the same muscle effect as spreading it across meals is another common mistake, and confusing protein grams with food weight is a third: 100 g of chicken is not 100 g of protein.",
+          "Above the range, the extra benefit for muscle is small and total diet still matters, so the top of a range is not automatically better than the middle."
+        ],
+        "callout": { "type": "warning", "title": "These are guidelines, not prescriptions", "text": "Individual protein needs vary by health, activity and other factors. These ranges are common guidelines for planning, not medical advice." },
+        "pitfalls": [
+          { "mistake": "Using total body weight when body fat is very high", "fix": "Some guidance uses lean mass instead in that case — flag it, do not silently switch." },
+          { "mistake": "Eating it all in one meal", "fix": "Spread the daily total across meals, about 32 g per meal in the 80 kg example." },
+          { "mistake": "Confusing protein grams with food weight", "fix": "Check the protein content of each food; 100 g of a food is not 100 g of protein." }
+        ]
+      }
+    ],
+    "faqs": [
+      { "question": "How much protein for 80 kg?", "answer": "64 g a day sedentary, 96-128 g active, and 128-176 g muscle-building by the ranges in this guide." },
+      { "question": "How do I split 128 g?", "answer": "About 32 g across 4 meals." },
+      { "question": "Is more protein always better?", "answer": "No — above the range the extra benefit for muscle is small and total diet still matters." }
+    ]
+  },
 };

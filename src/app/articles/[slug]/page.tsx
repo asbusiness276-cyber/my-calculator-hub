@@ -82,6 +82,9 @@ export default async function ArticlePage({ params }: Props) {
     "apr-vs-apy-explained": ["apy-calculator", "apr-calculator", "compound-interest-calculator"],
     "hecs-help-debt-explained": ["hecs-debt-calculator", "hecs-indexation-calculator", "hecs-repayment-time-calculator"],
     "credit-card-payoff-strategies": ["credit-card-payoff-calculator", "debt-to-income-calculator", "loan-calculator"],
+    "saving-for-a-house-deposit": ["savings-goal-calculator", "mortgage-calculator", "loan-calculator"],
+    "how-inflation-affects-savings": ["inflation-calculator", "compound-interest-calculator", "savings-goal-calculator"],
+    "debt-to-income-ratio-guide": ["debt-to-income-calculator", "mortgage-calculator", "loan-calculator"],
   };
   const terms = article.title.toLowerCase().split(/\s+/).filter((t) => t.length > 3);
   let relatedCalculators = relatedOverrides[slug]
